@@ -108,31 +108,54 @@
 							$arrayFecha = explode("/", $fechaCompleta);
 							$mesActual = $arrayFecha[2];
 							$diaSemana = $fechaCompleta[strpos($fechaCompleta, "/") + 1] + $fechaCompleta[strpos($fechaCompleta, "/") + 2];
-
-							// switch($diaSemana){
-
-							// 	case 1:
-
-
-							// }
 							
 							$dia = 1;
+							$diaComienzo = 4;
+							$diaFinal = 30;
 
-							for($i = $dia; $i <= 35; $i++, $dia++){
 
-								if($dia % 7 == 0){
-									echo '<div class="dia dia-final">',$dia,'</div>';
-								}else if($dia % 7 == 1){
-									echo '<div class="dia dia-inicio">',$dia,'</div>';
+							for($i = 1; $i <= 35; $i++){
 
-								}else if($dia == 4 || $dia == 16 || $dia == 20){
-									echo '<div class="dia-evento">', $dia, '</div>';
+								if($i < $diaComienzo || $dia > $diaFinal){
 
+									if($i % 7 == 0){
+
+										echo '<div class="dia-evento dia-final"></div>';
+
+									}else if($i % 7 == 1){
+
+										echo '<div class="dia-evento dia-inicio"></div>';
+
+									}else{
+
+										echo '<div class="dia-evento"></div>';
+
+									}
 								}else{
-									echo '<div class="dia">',$dia,'</div>';
-								}
 
+									if($i % 7 == 0){
+
+										echo '<div class="dia dia-final">'.$dia.'</div>';
+
+									}else if($i % 7 == 1){
+
+										echo '<div class="dia dia-inicio">'.$dia.'</div>';
+
+									}else{
+
+										echo '<div class="dia">'.$dia.'</div>';
+
+									}
+
+									$dia++;
+
+								}
 							}
+
+							
+
+									// }else if($dia == 4 || $dia == 16 || $dia == 20){
+									// echo '<div class="dia-evento">', $dia, '</div>';
 
 						?>
 					</div>

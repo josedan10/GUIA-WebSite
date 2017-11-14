@@ -57,7 +57,8 @@
 
 				.dia,
 				.dia-evento,
-				.dia-nombre{
+				.dia-nombre,
+				.dia-inactivo{
 			
 					width: 40px;
 					height: 40px;
@@ -72,14 +73,19 @@
 				}
 
 				.dia-evento{
-					background: $aguamarina;
-					color: $morado-ppal;
+					background: $pastel;
+					color: $pastel;
 				}
 
 				.dia{
 
 					background: $morado-ppal;
 					color: $pastel;
+				}
+
+				.dia-inactivo{
+					background: $pastel;
+					color: $pastel;					
 				}
 
 				.dia-nombre{

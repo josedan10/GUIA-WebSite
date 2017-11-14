@@ -239,7 +239,8 @@ footer {
         justify-content: space-around; }
         .container .presentacion .calendario .div-dias .dia,
         .container .presentacion .calendario .div-dias .dia-evento,
-        .container .presentacion .calendario .div-dias .dia-nombre {
+        .container .presentacion .calendario .div-dias .dia-nombre,
+        .container .presentacion .calendario .div-dias .dia-inactivo {
           width: 40px;
           height: 40px;
           margin: 0 10px;
@@ -249,10 +250,13 @@ footer {
           padding: 10px;
           box-sizing: border-box; }
         .container .presentacion .calendario .div-dias .dia-evento {
-          background: #24B156;
-          color: #2B0C47; }
+          background: #F5F5F5;
+          color: #F5F5F5; }
         .container .presentacion .calendario .div-dias .dia {
           background: #2B0C47;
+          color: #F5F5F5; }
+        .container .presentacion .calendario .div-dias .dia-inactivo {
+          background: #F5F5F5;
           color: #F5F5F5; }
         .container .presentacion .calendario .div-dias .dia-nombre {
           color: #2B0C47;
