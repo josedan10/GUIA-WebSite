@@ -1,0 +1,230 @@
+/*Responsive*/
+
+.nav2{
+	display:none;
+	background: $morado-ppal-transparente;
+	color: $pastel;
+	height: 74px;
+	position: fixed;
+	top: 0;
+	width: 100%;
+
+	z-index: 2;
+
+	svg{
+		height: 100%;
+		display: inline-block;
+		margin-left: 40px;
+	}
+	
+	span[class*="icon-menu"]{
+		width: 74px;
+		height: 74px;
+		display: inline-block;
+		float: right;
+		font-size: 50px;
+		text-align: center;		
+		box-sizing: border-box;
+		padding-top: 10px;
+
+		&:hover{
+			color: $aguamarina;
+			cursor: pointer;
+		}
+	}
+
+	.menu{	
+		position: absolute;
+		top: 0;
+		right: 0;
+		display: none;
+		list-style: none;
+		width: 100%;
+		background: $morado-ppal;
+
+		//Flexbox
+		flex-wrap: wrap;
+		align-items: center;
+		justify-content: center;
+
+
+		.icon-cross{
+			font-size: 40px;
+			position: absolute;
+			top: 10px;
+			right: 10px;
+
+			&:hover{
+				cursor: pointer;
+			}
+		}
+
+		.grupo{
+
+			div{
+
+				a{
+					text-decoration: none;
+					font: $btn;
+					color: $pastel;
+					display: block;
+					padding: 20px 40px;
+
+					span{
+						margin-right: 10px;
+					}
+
+					&:hover{
+						color: $aguamarina;
+					}
+				}
+			}
+
+		}
+
+	}
+}
+
+
+@media only screen and (max-width: 900px) {
+    .nav1 {
+        display: none;
+    }
+
+    .nav2{
+    	display: block;
+
+    }
+
+    .contacto,
+    .miembros,
+    .nosotros{
+    	padding-left: 20px;
+    	padding-right: 20px;
+    }
+
+    .mapa{
+		width: 80%;
+	}
+
+	// Sirius
+
+	.blog{
+		padding: 20px;
+	}
+	
+
+	//Calendario
+	.main{
+		.container{
+			
+			.titulo-calendario{
+				
+				width: 100%;
+				
+			}
+
+			.presentacion{
+				flex-wrap: wrap;
+
+				.calendario{
+
+					width: 100%;
+					padding: 10px;
+
+					.div-dias{
+						margin: 0 auto;
+						width: 300px;
+
+						.dia,
+						.dia-evento,
+						.dia-nombre{
+							margin: 0 5px;
+							width: 30px;
+							height: 30px;
+							display: flex;
+							align-items: center;
+							justify-content: center;
+						}
+
+					}
+				}
+
+				.imagen{
+
+					margin: 20px 0 0;
+
+					.detalles{
+						padding: 0 10px;
+					}
+				}
+			}
+
+		
+		}
+	}
+	
+}
+
+@media only screen and (max-width: 600px){
+
+	.nav2{
+		svg{
+			margin-left: 10px;
+		}
+	}
+
+	.suscripcion{
+		& > div:first-child{
+
+			width: 100%;
+		}
+
+		.formulario{
+			width: 80%;
+		}
+	}
+
+	.icons{
+		a{
+			padding: 0;
+			margin: 0;
+			span{
+				margin: 0;
+			}
+		}
+	}
+
+	.formulario{
+
+		padding: 10px 0;
+
+	}
+
+	
+	footer{
+
+		padding: 10px 0;
+
+		.social{
+			margin: 0;
+			box-sizing: border-box;
+
+			p{
+				min-width: 100px;
+				width: 200px;
+			}
+
+			a{				
+				span{
+					margin-right: 5px;
+				}
+			}
+		}
+
+		.developer{
+			min-width: 100px;
+			padding: 0;
+		}
+	}
+}

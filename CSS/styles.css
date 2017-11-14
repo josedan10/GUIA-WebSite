@@ -1,0 +1,570 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css?family=Play|Roboto:100,300,400,400i,700");
+/*Colores*/
+/*Fuentes*/
+/*Estilos generales*/
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none; }
+
+html {
+  height: 100%; }
+
+body {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  background: #F5F5F5; }
+
+h1 {
+  display: block;
+  padding-bottom: 20px;
+  margin: 0 auto;
+  text-align: center;
+  width: 200px;
+  font: bold 30px "Roboto", "Arial", sans-serif;
+  letter-spacing: 3px;
+  margin-bottom: 25px;
+  border-bottom: solid 3px; }
+
+h2 {
+  font: bold 22px "Roboto", "Arial", sans-serif;
+  margin-bottom: 20px;
+  letter-spacing: 1px; }
+
+h3 {
+  font: normal 16px "Roboto", "Arial", sans-serif;
+  margin-bottom: 10px; }
+
+.link {
+  color: #24B156; }
+
+/*Incluci├│n de imports*/
+.nosotros {
+  color: #F5F5F5;
+  background: #2B0C47;
+  padding: 95px 60px 50px;
+  text-align: center; }
+  .nosotros a {
+    text-decoration: none;
+    color: #F5F5F5; }
+  .nosotros article {
+    font: normal 14px "Roboto", "Arial", sans-serif;
+    line-height: 30px; }
+
+.miembros {
+  background: #F5F5F5;
+  text-align: center;
+  padding: 80px 60px 40px;
+  width: 100%;
+  box-sizing: border-box;
+  color: #2B0C47; }
+  .miembros .miembro {
+    max-width: 250px;
+    position: relative;
+    margin: 0 auto; }
+    .miembros .miembro img {
+      width: 100%;
+      height: 300px;
+      margin-bottom: 30px; }
+    .miembros .miembro .nombre-miembro {
+      font: normal 16px "Play", "Arial", sans-serif;
+      margin-bottom: 20px; }
+
+.contacto {
+  background: #2B0C47;
+  color: #F5F5F5;
+  padding: 80px 0 50px;
+  font: normal 14px "Roboto", "Arial", sans-serif;
+  position: relative; }
+  .contacto .mapa {
+    margin: 40px auto;
+    background: #ccc;
+    position: relative; }
+    .contacto .mapa iframe {
+      position: absolute;
+      width: 100%;
+      height: 100%; }
+  .contacto .direccion {
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto; }
+  .contacto .comentario {
+    margin-top: 150px;
+    font: normal 18px "Roboto", "Arial", sans-serif;
+    text-align: center; }
+  .contacto .formulario {
+    font: normal 14px "Roboto", "Arial", sans-serif;
+    position: relative;
+    max-width: 360px;
+    margin: 0 auto; }
+    .contacto .formulario input[type="text"],
+    .contacto .formulario input[type="email"],
+    .contacto .formulario textarea {
+      font: normal 14px "Roboto", "Arial", sans-serif;
+      display: block;
+      padding: 5px;
+      margin: 15px auto;
+      width: 100%;
+      box-sizing: border-box; }
+    .contacto .formulario textarea {
+      resize: none;
+      height: 190px; }
+    .contacto .formulario .btn {
+      display: block;
+      margin: 0 auto; }
+
+.btn1 {
+  color: #2B0C47;
+  background: #F5F5F5; }
+
+.btn2 {
+  color: #F5F5F5;
+  background: #2B0C47; }
+
+.btn {
+  border: none;
+  font: normal 20px "Play", "Arial", sans-serif;
+  padding: 10px; }
+  .btn:hover {
+    cursor: pointer; }
+  .btn:active {
+    background: #24B156; }
+
+footer {
+  padding: 10px 14px;
+  background: #2B0C47;
+  font: normal 12px "Roboto", "Arial", sans-serif;
+  color: #F5F5F5;
+  display: flex; }
+  footer p {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    width: 100%; }
+  footer .social {
+    margin-top: 10px;
+    margin: 10px auto 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    box-sizing: border-box;
+    max-width: 100px; }
+    footer .social .icons {
+      margin: 10px auto 0;
+      display: flex;
+      justify-content: space-around; }
+      footer .social .icons a {
+        color: #F5F5F5;
+        padding: 5px;
+        box-sizing: border-box; }
+        footer .social .icons a span {
+          box-sizing: border-box;
+          display: inline-block;
+          font-size: 20px;
+          margin-right: 10px; }
+  footer .developer {
+    margin: 10px auto 0;
+    text-align: center; }
+
+.nav1 {
+  background: rgba(43, 12, 71, 0.9);
+  color: #F5F5F5;
+  height: 74px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 2; }
+  .nav1 svg {
+    height: 100%;
+    display: inline-block;
+    margin-left: 40px; }
+  .nav1 ul {
+    display: inline-block;
+    list-style-type: none;
+    float: right;
+    font: normal 16px "Play", "Arial", sans-serif; }
+    .nav1 ul li {
+      display: inline-block;
+      float: right;
+      padding: 30px 15px;
+      letter-spacing: 1px; }
+      .nav1 ul li a {
+        text-decoration: none;
+        color: #F5F5F5; }
+        .nav1 ul li a:hover {
+          color: #24B156; }
+
+.container {
+  margin-top: 84px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around; }
+  .container .titulo-calendario {
+    margin-bottom: 30px;
+    max-width: 400px;
+    padding-bottom: 20px;
+    margin: 0 auto;
+    text-align: center;
+    font: bold 30px "Roboto", "Arial", sans-serif;
+    letter-spacing: 3px;
+    margin-bottom: 25px;
+    border-bottom: solid 3px; }
+  .container .presentacion {
+    display: flex;
+    flex-wrap: no-wrap;
+    justify-content: center; }
+    .container .presentacion .calendario {
+      padding: 0 20px;
+      box-sizing: border-box; }
+      .container .presentacion .calendario .mes {
+        display: flex;
+        margin-bottom: 10px;
+        justify-content: space-between; }
+        .container .presentacion .calendario .mes .mesBlock {
+          font: normal 14px "Roboto", "Arial", sans-serif;
+          text-align: center;
+          padding: 5px 10px;
+          background: #2B0C47;
+          color: #F5F5F5; }
+      .container .presentacion .calendario .div-dias {
+        height: 300px;
+        max-width: 400px;
+        display: flex;
+        margin: 0 auto;
+        padding-top: 10px;
+        flex-wrap: wrap;
+        justify-content: space-around; }
+        .container .presentacion .calendario .div-dias .dia,
+        .container .presentacion .calendario .div-dias .dia-evento,
+        .container .presentacion .calendario .div-dias .dia-nombre {
+          width: 40px;
+          height: 40px;
+          margin: 0 10px;
+          font: normal 14px "Roboto", "Arial", sans-serif;
+          border-radius: 50%;
+          text-align: center;
+          padding: 10px;
+          box-sizing: border-box; }
+        .container .presentacion .calendario .div-dias .dia-evento {
+          background: #24B156;
+          color: #2B0C47; }
+        .container .presentacion .calendario .div-dias .dia {
+          background: #2B0C47;
+          color: #F5F5F5; }
+        .container .presentacion .calendario .div-dias .dia-nombre {
+          color: #2B0C47;
+          font: bold 14px "Roboto", "Arial", sans-serif; }
+        .container .presentacion .calendario .div-dias .dia-inicio {
+          margin-left: 0; }
+        .container .presentacion .calendario .div-dias .dia-final {
+          margin-right: 0; }
+    .container .presentacion .imagen {
+      max-width: 500px;
+      position: relative; }
+      .container .presentacion .imagen img {
+        width: 80%;
+        display: block;
+        margin: 0 auto; }
+      .container .presentacion .imagen .detalles {
+        padding: 20px 0 0;
+        box-sizing: border-box; }
+        .container .presentacion .imagen .detalles h3 {
+          width: 80%;
+          text-align: center;
+          margin: 0 auto 10px; }
+        .container .presentacion .imagen .detalles p {
+          display: none;
+          width: 80%;
+          font: normal 14px "Roboto", "Arial", sans-serif;
+          margin: auto; }
+
+.swiper-container {
+  margin-top: 74px;
+  background: #F5F5F5;
+  width: 100%;
+  position: relative;
+  height: 454px; }
+
+.swiper-wrapper {
+  height: 100%;
+  position: relative; }
+
+.swiper-slide {
+  height: 100%;
+  width: 100%; }
+  .swiper-slide img {
+    height: 100%;
+    width: 100%; }
+
+.title-swiper {
+  color: #F5F5F5;
+  letter-spacing: 2px;
+  font: bold 40px "Play", "Arial", sans-serif;
+  position: absolute;
+  z-index: 2;
+  /*TODO:
+  	Acomodar el texto que va dentro del swiper
+  */
+  margin: auto;
+  text-align: center;
+  line-height: 80px;
+  padding: 100px 0;
+  display: block;
+  width: 100%;
+  height: 100%; }
+
+.swiper-button-prev,
+.swiper-button-next {
+  background-image: none; }
+
+.icon-chevron-thin-left,
+.icon-chevron-thin-right {
+  font-size: 40px;
+  color: #F5F5F5; }
+
+.swiper-pagination-bullet {
+  /*Cambiar color y tama├▒o de los controles*/
+  height: 15px;
+  width: 15px;
+  background: #F5F5F5; }
+
+.blog {
+  margin-top: 70px;
+  padding: 30px 140px; }
+  .blog .title-blog {
+    margin: 30px 0 50px 0;
+    width: 120px;
+    color: #121212; }
+  .blog article {
+    margin-bottom: 100px;
+    position: relative;
+    color: #121212; }
+    .blog article .atributos-articulo {
+      font: 300 12px "Roboto", "Arial", sans-serif;
+      letter-spacing: 1px;
+      margin-bottom: 10px; }
+      .blog article .atributos-articulo span {
+        margin: 0 5px 0 15px; }
+      .blog article .atributos-articulo .icon-calendar {
+        margin: 0 10px 0 0; }
+    .blog article img {
+      width: 100%;
+      margin-bottom: 20px; }
+    .blog article .articulo {
+      font: normal 14px "Roboto", "Arial", sans-serif;
+      line-height: 20px;
+      text-align: justify; }
+      .blog article .articulo p {
+        margin-bottom: 20px; }
+    .blog article .btn {
+      border: none;
+      background: #2B0C47;
+      font: normal 20px "Play", "Arial", sans-serif;
+      padding: 10px;
+      margin-top: 20px; }
+      .blog article .btn a {
+        color: #F5F5F5;
+        text-decoration: none; }
+      .blog article .btn:hover {
+        cursor: pointer; }
+      .blog article .btn:active {
+        background: #24B156; }
+
+.busqueda {
+  margin-bottom: 50px;
+  position: relative; }
+  .busqueda input {
+    padding: 10.5px;
+    font: normal 14px "Roboto", "Arial", sans-serif;
+    border: solid 1px #2B0C47; }
+  .busqueda span {
+    display: inline-block;
+    font-size: 30px;
+    background: #2B0C47;
+    color: #F5F5F5;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    padding: 5px; }
+    .busqueda span:hover {
+      cursor: pointer; }
+
+.suscripcion {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  font: normal 14px "Roboto", "Arial", sans-serif; }
+  .suscripcion > div:first-child {
+    padding: 10px 30px;
+    position: relative;
+    box-sizing: border-box;
+    width: 50%; }
+  .suscripcion .formulario {
+    width: 50%;
+    box-sizing: border-box;
+    position: relative;
+    margin-top: 20px; }
+    .suscripcion .formulario form {
+      margin-top: 20px; }
+      .suscripcion .formulario form input[type="text"], .suscripcion .formulario form input[type="email"], .suscripcion .formulario form textarea {
+        display: block;
+        width: 100%;
+        max-width: 500px;
+        border-style: solid;
+        border-width: 1px;
+        border-color: #121212;
+        margin-bottom: 10px;
+        padding: 5px;
+        font: normal 14px "Roboto", "Arial", sans-serif;
+        box-sizing: border-box; }
+      .suscripcion .formulario form textarea {
+        resize: none; }
+      .suscripcion .formulario form input[type="submit"] {
+        margin: 0 auto;
+        display: block; }
+
+.bloques-de-links ul {
+  margin-left: 40px;
+  margin-bottom: 50px; }
+  .bloques-de-links ul li a {
+    padding: 5px 5px;
+    display: inline-block;
+    color: #121212;
+    font: normal 14px "Roboto", "Arial", sans-serif; }
+    .bloques-de-links ul li a:hover {
+      color: #24B156; }
+
+/*Responsive*/
+.nav2 {
+  display: none;
+  background: rgba(43, 12, 71, 0.9);
+  color: #F5F5F5;
+  height: 74px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 2; }
+  .nav2 svg {
+    height: 100%;
+    display: inline-block;
+    margin-left: 40px; }
+  .nav2 span[class*="icon-menu"] {
+    width: 74px;
+    height: 74px;
+    display: inline-block;
+    float: right;
+    font-size: 50px;
+    text-align: center;
+    box-sizing: border-box;
+    padding-top: 10px; }
+    .nav2 span[class*="icon-menu"]:hover {
+      color: #24B156;
+      cursor: pointer; }
+  .nav2 .menu {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: none;
+    list-style: none;
+    width: 100%;
+    background: #2B0C47;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center; }
+    .nav2 .menu .icon-cross {
+      font-size: 40px;
+      position: absolute;
+      top: 10px;
+      right: 10px; }
+      .nav2 .menu .icon-cross:hover {
+        cursor: pointer; }
+    .nav2 .menu .grupo div a {
+      text-decoration: none;
+      font: normal 20px "Play", "Arial", sans-serif;
+      color: #F5F5F5;
+      display: block;
+      padding: 20px 40px; }
+      .nav2 .menu .grupo div a span {
+        margin-right: 10px; }
+      .nav2 .menu .grupo div a:hover {
+        color: #24B156; }
+
+@media only screen and (max-width: 900px) {
+  .nav1 {
+    display: none; }
+
+  .nav2 {
+    display: block; }
+
+  .contacto,
+  .miembros,
+  .nosotros {
+    padding-left: 20px;
+    padding-right: 20px; }
+
+  .mapa {
+    width: 80%; }
+
+  .blog {
+    padding: 20px; }
+
+  .main .container .titulo-calendario {
+    width: 100%; }
+  .main .container .presentacion {
+    flex-wrap: wrap; }
+    .main .container .presentacion .calendario {
+      width: 100%;
+      padding: 10px; }
+      .main .container .presentacion .calendario .div-dias {
+        margin: 0 auto;
+        width: 300px; }
+        .main .container .presentacion .calendario .div-dias .dia,
+        .main .container .presentacion .calendario .div-dias .dia-evento,
+        .main .container .presentacion .calendario .div-dias .dia-nombre {
+          margin: 0 5px;
+          width: 30px;
+          height: 30px;
+          display: flex;
+          align-items: center;
+          justify-content: center; }
+    .main .container .presentacion .imagen {
+      margin: 20px 0 0; }
+      .main .container .presentacion .imagen .detalles {
+        padding: 0 10px; } }
+@media only screen and (max-width: 600px) {
+  .nav2 svg {
+    margin-left: 10px; }
+
+  .suscripcion > div:first-child {
+    width: 100%; }
+  .suscripcion .formulario {
+    width: 80%; }
+
+  .icons a {
+    padding: 0;
+    margin: 0; }
+    .icons a span {
+      margin: 0; }
+
+  .formulario {
+    padding: 10px 0; }
+
+  footer {
+    padding: 10px 0; }
+    footer .social {
+      margin: 0;
+      box-sizing: border-box; }
+      footer .social p {
+        min-width: 100px;
+        width: 200px; }
+      footer .social a span {
+        margin-right: 5px; }
+    footer .developer {
+      min-width: 100px;
+      padding: 0; } }
+
+/*# sourceMappingURL=styles.css.map */

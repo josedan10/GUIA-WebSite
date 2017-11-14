@@ -1,0 +1,41 @@
+.nav1 {
+	background: $morado-ppal-transparente;
+	color: $pastel;
+	height: 74px;
+	position: fixed;
+	top: 0;
+	width: 100%;
+
+	z-index: 2;
+
+	svg{
+		height: 100%;
+		display: inline-block;
+		margin-left: 40px;
+	}
+
+
+	ul{
+	display: inline-block;
+	list-style-type: none;
+	float: right;
+	font: $nav;
+	
+		li{
+			display: inline-block;
+			float: right;
+			padding: 30px 15px;
+			letter-spacing: 1px;
+
+			a{
+				text-decoration: none;
+				color: $pastel;
+
+				&:hover{
+					color: $aguamarina;
+				}
+			}
+
+		}
+	}
+}

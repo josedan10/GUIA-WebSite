@@ -1,0 +1,195 @@
+.nosotros{
+
+	color: $pastel;
+
+	a{
+		text-decoration: none;
+		color: $pastel;
+	}
+
+	background: $morado-ppal;
+	padding: 95px 60px 50px;
+	text-align: center;
+	
+	article{
+		font: $texto;
+		line-height: 30px;
+	}
+
+}
+
+.miembros{
+
+	background: $pastel;
+	text-align: center;
+	padding: 80px 60px 40px;
+	width: 100%;
+	box-sizing: border-box;
+	color: $morado-ppal;
+
+	.miembro{
+		max-width: 250px;
+		position: relative;
+		margin: 0 auto;
+
+		img{
+			width: 100%;
+			height: 300px;
+			margin-bottom: 30px;
+		}
+
+		.nombre-miembro{
+			font: $nav;
+			margin-bottom: 20px;
+		}
+	}
+
+}
+
+.contacto{
+	
+	background: $morado-ppal;
+	color: $pastel;
+	padding: 80px 0 50px;	
+	font: $texto;
+	position: relative;
+
+	.mapa{
+		margin: 40px auto;
+		background: #ccc;
+		position: relative;
+
+		iframe{
+			position: absolute;
+			width: 100%;
+			height: 100%;
+		}
+	}
+
+	.direccion{
+		text-align: center;
+		max-width: 600px;
+		margin: 0 auto;
+	}
+
+	.comentario{
+		margin-top: 150px;
+		font: $texto-medio;
+		text-align: center;
+	}
+
+	.formulario{
+
+		font: $texto;
+		position: relative;
+		max-width: 360px;
+		margin: 0 auto;
+
+		input[type="text"],
+		input[type="email"],
+		textarea{
+			font: $texto;
+			display: block;
+			padding: 5px;
+			margin: 15px auto;
+			width: 100%;
+			box-sizing: border-box;
+		}
+
+		textarea{
+			resize: none;
+			height: 190px;
+		}
+		
+
+		.btn{
+			display: block;
+			margin: 0 auto;
+		}
+	}
+
+}
+
+.btn1{
+	color: $morado-ppal;
+	background: $pastel;
+}
+
+.btn2{
+	color: $pastel;
+	background: $morado-ppal;
+}
+
+.btn{
+	border: none;
+	font: $btn;
+	padding: 10px;
+
+	&:hover{
+		cursor: pointer;
+	}
+	
+	&:active{
+		background:$aguamarina;
+	}
+}
+
+footer{
+	padding: 10px 14px;
+	background: $morado-ppal;
+	font: $texto-peq;
+	color: $pastel;
+	display: flex;
+	
+
+	p{	
+		display: block;
+		margin: 0 auto;
+		text-align: center;
+		width: 100%;
+	}
+
+
+	.social{
+
+		margin-top: 10px;
+		margin: 10px auto 0;
+
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		align-items: flex-start;
+		box-sizing: border-box;
+		max-width: 100px;
+
+		.icons{
+			margin: 10px auto 0;
+			display: flex;
+			justify-content: space-around;
+
+
+			a{
+				color: $pastel;
+				padding: 5px;
+				box-sizing: border-box;
+
+				span{
+					box-sizing: border-box;	
+					display: inline-block;
+					font-size: 20px;
+					margin-right: 10px;
+				}
+			}
+		}
+			
+	}
+
+	.developer{
+		margin: 10px auto 0;
+		text-align: center;
+		//min-width: 200px;
+	}
+
+
+	
+}

@@ -1,0 +1,141 @@
+.container{
+
+	margin-top: 84px;
+
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+
+	.titulo-calendario{
+		margin-bottom: 30px;
+		max-width: 400px;
+		padding-bottom: 20px;
+		margin: 0 auto;
+		text-align: center;
+		font: $titulo-h1;
+		letter-spacing: 3px;
+		margin-bottom: 25px;
+		border-bottom: solid 3px;
+	}
+	
+	.presentacion{
+		
+		display: flex;	
+		flex-wrap: no-wrap;
+		justify-content: center;
+
+		.calendario{
+		
+			padding: 0 20px;
+			box-sizing: border-box;
+
+			.mes{
+				
+				display: flex;
+				margin-bottom: 10px;
+				justify-content: space-between;
+
+				.mesBlock{
+				
+					font: $texto;
+					text-align: center;	
+					padding: 5px 10px;		
+					background: $morado-ppal;
+					color: $pastel;	
+				}
+			}
+
+			.div-dias{
+
+				height: 300px;
+				max-width: 400px;
+				display: flex;
+				margin: 0 auto;
+				padding-top: 10px;
+				flex-wrap: wrap;
+				justify-content: space-around;
+
+				.dia,
+				.dia-evento,
+				.dia-nombre{
+			
+					width: 40px;
+					height: 40px;
+					margin: 0 10px;
+					font: $texto;
+					border-radius: 50%;
+					text-align: center;
+
+					padding: 10px;
+					box-sizing: border-box;
+
+				}
+
+				.dia-evento{
+					background: $aguamarina;
+					color: $morado-ppal;
+				}
+
+				.dia{
+
+					background: $morado-ppal;
+					color: $pastel;
+				}
+
+				.dia-nombre{
+					
+					color: $morado-ppal;
+					font: $texto-bold;
+				}
+
+				.dia-inicio{
+					margin-left: 0;
+
+				}
+
+				.dia-final{
+					margin-right: 0;
+				}
+			}
+			
+		}
+
+		.imagen{
+
+			max-width: 500px;
+			position: relative;
+
+			img{
+				width: 80%;
+				display: block;
+				margin: 0 auto;
+			}
+
+			.detalles{
+				
+				padding: 20px 0 0;
+				box-sizing: border-box;
+
+				h3{
+					//padding:  30px;
+					width: 80%;
+					text-align: center;
+					margin: 0 auto 10px;	
+				}
+
+				p{
+					display: none;
+					width: 80%;
+					font: $texto;
+					margin: auto;	
+					//padding: 0 30px;
+				}
+			}
+		}
+
+	}
+
+
+}
+
+//14-11222@usb.ve

@@ -1,0 +1,172 @@
+.blog{
+	margin-top: 70px;
+	padding: 30px 140px;
+
+	.title-blog{
+		margin: 30px 0 50px 0;
+		width: 120px;
+		color: $negro;
+	}
+	
+	article{
+
+		margin-bottom: 100px;
+		position: relative;
+		color: $negro;
+		
+
+		.atributos-articulo{
+			font: $texto-ligero;
+			letter-spacing: 1px;
+			margin-bottom: 10px;
+
+			span{
+				margin: 0 5px 0 15px;
+			}
+
+			.icon-calendar{
+				margin: 0 10px 0 0;
+			}
+		}
+
+		img{
+			width: 100%;
+			margin-bottom: 20px;
+		}
+
+		.articulo{
+			font: $texto;
+			line-height: 20px;
+			text-align: justify;
+
+			p{
+				margin-bottom: 20px;
+			}
+		}
+
+
+		.btn{
+			border: none;
+			background: $morado-ppal;
+			font: $btn;
+			padding: 10px;
+			margin-top: 20px;
+
+			a{
+				color: $pastel;
+				text-decoration: none;
+			}
+
+			&:hover{
+				cursor: pointer;
+			}
+			
+			&:active{
+				background:$aguamarina;
+			}
+		}
+			
+	}
+}
+
+
+
+.busqueda{
+
+	margin-bottom: 50px;
+	position: relative;
+
+	input{
+		
+		padding: 10.5px;
+		font: $texto;
+		border: solid 1px $morado-ppal;
+	}
+
+	span{
+		display: inline-block;
+		font-size: 30px;
+		background: $morado-ppal;
+		color: $pastel;
+		position: absolute;
+		bottom: 0;
+		right: 0;
+		padding: 5px;
+
+		&:hover{
+			cursor: pointer;
+		}
+	}
+}
+
+
+.suscripcion{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	font: $texto;
+	
+	& > div:first-child{
+		padding: 10px 30px;
+		position: relative;
+		box-sizing: border-box;
+		width: 50%;
+	}
+	
+	.formulario{
+		width: 50%;
+		box-sizing: border-box;
+		position: relative;
+		margin-top: 20px;
+		
+		form{
+
+			margin-top: 20px;
+
+			input[type="text"], input[type="email"], textarea{
+				display: block;
+				width: 100%;
+				max-width: 500px;
+				border-style: solid;
+				border-width: 1px;
+				border-color: $negro;
+				margin-bottom: 10px;
+				padding: 5px;
+				font: $texto;
+				box-sizing: border-box;
+			}
+
+			textarea{
+				resize: none;
+			}
+
+			input[type="submit"]{
+				margin: 0 auto;
+				display: block;
+			}
+			
+		}
+	}
+}
+
+
+.bloques-de-links{
+	ul{
+
+		margin-left: 40px;
+		margin-bottom: 50px;
+		
+		
+		li a{
+			padding: 5px 5px;
+			display: inline-block;
+			color: $negro;
+			font: $texto;
+
+			&:hover{
+				color: $aguamarina;
+			}
+		}
+	}
+}

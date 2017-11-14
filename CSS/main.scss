@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css?family=Play|Roboto:100,300,400,400i,700');
+
+/*Colores*/
+
+$morado-ppal-transparente: rgba(43,12,71,.9);
+$morado-ppal: #2B0C47;
+$pastel-transparente: rgba(255, 247, 229, 1);
+$pastel: #F5F5F5;
+$aguamarina: #24B156;
+$negro: #121212;
+
+/*Fuentes*/
+
+$nav: normal 16px 'Play', 'Arial', sans-serif;
+$titulo-swiper-font: bold 40px 'Play', 'Arial', sans-serif;
+$titulo-h1: bold 30px 'Roboto', 'Arial', sans-serif;
+$titulo-h2: bold 22px 'Roboto', 'Arial', sans-serif;
+$titulo-h3: normal 16px 'Roboto', 'Arial', sans-serif;
+$texto-ligero: 300 12px 'Roboto', 'Arial', sans-serif;
+$texto-peq: normal 12px 'Roboto', 'Arial', sans-serif;
+$texto: normal 14px 'Roboto','Arial', sans-serif;
+$texto-medio: normal 18px 'Roboto', 'Arial', sans-serif;
+$texto-bold: bold 14px 'Roboto','Arial', sans-serif;
+$btn: normal 20px 'Play', 'Arial', sans-serif;
+
+
+/*Estilos generales*/
+
+*{
+	margin: 0;
+	padding: 0;
+	text-decoration: none;
+}
+
+html{
+	height: 100%;
+}
+
+body{
+	position: absolute;
+	top: 0;
+	width: 100%;
+	background: $pastel;
+}
+
+
+h1{
+
+	display: block;
+	padding-bottom: 20px;
+	margin: 0 auto;
+	text-align: center;
+	width: 200px;
+	font: $titulo-h1;
+	letter-spacing: 3px;
+	margin-bottom: 25px;
+	border-bottom: solid 3px;
+
+}
+
+
+h2{
+	font: $titulo-h2;
+	margin-bottom: 20px;
+	letter-spacing: 1px;
+}
+
+h3{
+	font: $titulo-h3;
+	margin-bottom: 10px;
+}
+
+.link{
+	color: $aguamarina;
+}
+
+
+
+/*Inclución de imports*/
+
+@import 'index';
+@import 'nav-bar';
+@import 'calendario';
+@import 'swiper';
+@import 'blog';
+@import 'responsive';
