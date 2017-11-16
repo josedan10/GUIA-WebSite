@@ -70,6 +70,43 @@
 		</nav>
 
 		<div class="container">
+
+			<?php 
+
+				//Conexión a BD
+
+				$servername = "localhost";
+				$username = "root";
+				$password = "Zedstaphplis07.";
+				$dbname = "guiabd";
+
+				// Creamos la conexión
+				$conn = new mysqli($servername, $username, $password, $dbname);
+
+				// Verificamos la conexión
+				if ($conn->connect_error) {
+				    die("Connection failed: " . $conn->connect_error);
+				} 
+
+
+				///////////////////////////////////////////////////////////////////////////////////////////////////
+
+				$diasMeses = array(1 => 'Enero', 2 => 'Febrero', 3 => 'Marzo', 4 => 'Abril', 5 => 'Mayo', 6 => 'Junio',
+					7 => 'Julio', 8 => 'Agosto', 9 => 'Septiembre', 10 => 'Octubre', 11 => 'Noviembre', 12 => 'Diciembre');
+
+				$diasSemana = array("Sunday" => 1, "Monday" => 2, "Tuesday" => 3, "Wednesday" => 4, 
+					"Thursday" => 5, "Friday" => 6, "Saturday" => 7);
+
+				
+				$fechaCompleta = date('Y/d/m');
+				$diaSemanaActual = date('l');				//Dia de la semana correspondiente al array $diasSemana
+
+				$arrayFecha = explode("/", $fechaCompleta);	//Array de la fecha
+				$mesActual = $diasMeses[$arrayFecha[2]];	//Mes actual
+				$diaSemana = $arrayFecha[1]; 				//Dia de la semana correspondiente a con el array $DiasMeses
+
+
+			 ?>
 			
 			<div class="titulo-calendario">
 				ENERO - MARZO 2017
@@ -95,40 +132,40 @@
 
 						<?php
 
-							$diasMeses = array(1 => 31, 2 => 28, 3 => 31, 4 => 30, 5 => 31, 6 => 30, 7 => 31, 
-								8 => 31, 9 => 30, 10 => 31, 11 => 30, 12 => 31);
-
-							$diasSemana = array("Sunday" => 1, "Monday" => 2, "Tuesday" => 3, "Wednesday" => 4, 
-								"Thursday" => 5, "Friday" => 6, "Saturday" => 7);
-
 							
-							$fechaCompleta = date('Y/d/m');
-							$diaSemanaActual = date('l');
+							////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-							$arrayFecha = explode("/", $fechaCompleta);
-							$mesActual = $arrayFecha[2];
-							$diaSemana = $fechaCompleta[strpos($fechaCompleta, "/") + 1] + $fechaCompleta[strpos($fechaCompleta, "/") + 2];
-							
-							$dia = 1;
-							$diaComienzo = 4;
-							$diaFinal = 30;
+							$Query = "SELECT Inicio, Dias FROM mes WHERE Nombre = '$mesActual';";
 
+							//Consulta
+							$resultado = $conn->query($Query);
 
-							for($i = 1; $i <= 35; $i++){
+							$row = $resultado->fetch_row();
 
-								if($i < $diaComienzo || $dia > $diaFinal){
+							$diaInicio = $row[0];
+							$diaFinal = $row[1];
+
+							$conn->close();
+
+							///////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+							//Creamos el Calendario
+
+							for($i = 1, $dia = 1; $i <= 35; $i++){
+
+								if($i < $diaInicio || $dia > $diaFinal){
 
 									if($i % 7 == 0){
 
-										echo '<div class="dia-evento dia-final"></div>';
+										echo '<div class="dia-inactivo dia-final"></div>';
 
 									}else if($i % 7 == 1){
 
-										echo '<div class="dia-evento dia-inicio"></div>';
+										echo '<div class="dia-inactivo dia-inicio"></div>';
 
 									}else{
 
-										echo '<div class="dia-evento"></div>';
+										echo '<div class="dia-inactivo"></div>';
 
 									}
 								}else{
@@ -151,11 +188,6 @@
 
 								}
 							}
-
-							
-
-									// }else if($dia == 4 || $dia == 16 || $dia == 20){
-									// echo '<div class="dia-evento">', $dia, '</div>';
 
 						?>
 					</div>
