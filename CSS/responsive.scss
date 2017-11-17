@@ -138,7 +138,8 @@
 
 						.dia,
 						.dia-evento,
-						.dia-nombre{
+						.dia-nombre,
+						.dia-inactivo{
 							margin: 0 5px;
 							width: 30px;
 							height: 30px;
@@ -176,12 +177,13 @@
 
 	.suscripcion{
 		& > div:first-child{
-
 			width: 100%;
 		}
 
 		.formulario{
-			width: 80%;
+			width: 100%;
+			padding: 10px 30px;
+
 		}
 	}
 

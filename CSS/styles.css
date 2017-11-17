@@ -204,7 +204,7 @@ footer {
   justify-content: space-around; }
   .container .titulo-calendario {
     margin-bottom: 30px;
-    max-width: 400px;
+    max-width: 1000px;
     padding-bottom: 20px;
     margin: 0 auto;
     text-align: center;
@@ -250,8 +250,8 @@ footer {
           padding: 10px;
           box-sizing: border-box; }
         .container .presentacion .calendario .div-dias .dia-evento {
-          background: #F5F5F5;
-          color: #F5F5F5; }
+          background: #24B156;
+          color: #24B156; }
         .container .presentacion .calendario .div-dias .dia {
           background: #2B0C47;
           color: #F5F5F5; }
@@ -528,7 +528,8 @@ footer {
         width: 300px; }
         .main .container .presentacion .calendario .div-dias .dia,
         .main .container .presentacion .calendario .div-dias .dia-evento,
-        .main .container .presentacion .calendario .div-dias .dia-nombre {
+        .main .container .presentacion .calendario .div-dias .dia-nombre,
+        .main .container .presentacion .calendario .div-dias .dia-inactivo {
           margin: 0 5px;
           width: 30px;
           height: 30px;
@@ -546,7 +547,8 @@ footer {
   .suscripcion > div:first-child {
     width: 100%; }
   .suscripcion .formulario {
-    width: 80%; }
+    width: 100%;
+    padding: 10px 30px; }
 
   .icons a {
     padding: 0;
