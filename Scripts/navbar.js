@@ -7,6 +7,7 @@ $(document).ready(function(){
 
 		menu.css("display", "flex");
 		menu.height($(window).height());
+		$('body').css("overflow", "hidden");
 		
 	});
 
@@ -20,6 +21,7 @@ $(document).ready(function(){
 	var cerrarIcon = $("#cerrar-menu");
 	cerrarIcon.click(function(){
 		menu.css("display", "none");
+		$('body').css("overflow", "scroll");
 	})
 
 });
