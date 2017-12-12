@@ -36,17 +36,30 @@
 
 		//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
+		$Query = 'SELECT * FROM mes;';
+
+		$diasInicio = array();
+		$diasTotales = array();
+
+		$resultado = $conn->query($Query);
+
+		if ($resultado->num_rows > 0) {
+		    // Datos de cada fila
+		    while($row = $resultado->fetch_assoc()) {
+
+		        $diasInicio[$row["Nombre"]] = $row["Inicio"];
+		        $diasTotales[$row["Nombre"]] = $row["Dias"];
+
+		    }
+		} else {
+		    echo "0 results";
+		}
+
 		for ($i = 1; $i <= 12; $i++){
 
-			$QuerySelect = "SELECT Inicio, Dias FROM mes WHERE Nombre = '$Meses[$i]';";
-						
-			//Consulta
-			$resultado = $conn->query($QuerySelect);
 
-			$row = $resultado->fetch_row();
-
-			$diaInicio = $row[0];
-			$diaFinal = $row[1];
+			$diaInicio = $diasInicio[$row["Nombre"]];
+			$diaFinal = $diasTotales[$row["Nombre"]];
 
 			$varDia = ($varDia + $diaFinal) % 7;
 
