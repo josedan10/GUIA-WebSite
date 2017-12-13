@@ -4,19 +4,22 @@
   "description": "Website del Gupo Universitario de Investigaciones Astronómicas de la USB (GUIA)",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "pack": "webpack ./js/index.js ./dist/bundle.js",
+    "pack:prod": "webpack ./js/index.js ./dist/bundle.js -p"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/josedan10/GUIA-WebSite.git"
   },
   "author": "José Quintero",
-  "license": "ISC",
+  "license": "GPL",
   "bugs": {
     "url": "https://github.com/josedan10/GUIA-WebSite/issues"
   },
   "homepage": "https://github.com/josedan10/GUIA-WebSite#readme",
   "devDependencies": {
-    "webpack": "^3.10.0"
+    "webpack": "^3.10.0",
+    "webpack-dev-server": "^2.9.7"
   }
 }
