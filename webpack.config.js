@@ -1,30 +1,19 @@
 const path = require('path');
-const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
+const webpack = require('webpack');
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 
 const config = {
-  entry: './js/index.js',
+  entry: './js/index.jsx',
 
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: 'bundle.min.js'
+    filename: 'bundle.min.js' //Archivo de salida
   },
 
   devtool: 'eval-source-map',
 
   module: {
     rules: [
-      {
-         test: /\.js$/,
-         loader: 'babel-loader',
-         exclude: /node_modules/,
-         options: {
-          presets: [
-            'babel-preset-es2015',
-            'babel-preset-env'
-          ].map(require.resolve)
-        }
-      },
-
       {
         test: /\.scss$/,
         use: [{
@@ -35,14 +24,25 @@ const config = {
                 loader: "sass-loader" // compiles Sass to CSS
             }],
         exclude: /node_modules/
+      },
+
+      {
+        test: /\.jsx$/,
+        exclude: /(node_modules|bower_components)/,
+        use: [{
+          loader:'babel-loader',
+          options: {
+              presets: ['react', 'env', 'es2015']
+          }
+        }]
       }
     ]
   },
 
   plugins: [
-    new UglifyJsPlugin() //Minificar el bundle
+    //new UglifyJsPlugin() //Minificar el bundle
   ]
-}
+};
 
 
 module.exports = config;
