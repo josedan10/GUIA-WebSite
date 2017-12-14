@@ -4,8 +4,9 @@
   "description": "Website del Gupo Universitario de Investigaciones Astronómicas de la USB (GUIA)",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "pack": "webpack",
+    "test": "webpack-dev-server",
+    "start": "webpack",
+    "dev": "webpack --watch",
     "prod": "webpack -p"
   },
   "repository": {

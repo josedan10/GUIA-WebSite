@@ -11,7 +11,7 @@ class Salida extends React.Component{
 
 	render() {
 		return(
-			<h1>React está funcionando</h1>
+			<h1>React está funcionando en tiempo real en este momento</h1>
 		);
 	}
 }
@@ -19,3 +19,4 @@ class Salida extends React.Component{
 const app = document.getElementById('app');
 
 ReactDOM.render(<Salida />, app);
+//location.reload(true);

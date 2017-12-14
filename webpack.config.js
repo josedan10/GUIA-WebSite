@@ -3,14 +3,21 @@ const webpack = require('webpack');
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 
 const config = {
-  entry: './js/index.jsx',
+  entry: [
+    './js/index.jsx',
+  ],
 
   output: {
     path: path.resolve(__dirname, 'dist'),
+    publicPath: '/dist/',
     filename: 'bundle.min.js' //Archivo de salida
   },
 
   devtool: 'eval-source-map',
+
+  devServer: {
+    inline: true,
+  },
 
   module: {
     rules: [
