@@ -2,10 +2,24 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 
 
+
 class Menu extends React.Component{
 
 	render(){
+
 		if(window.innerWidth > 900){
+
+			///////////////////////////////////////////////////////////////////////////////////////////
+			///
+			///jQuery
+			$(function(){
+				
+				var nav = $('#nav');
+				nav.addClass('nav1');	//Agregamos la clase nav1 para pantallas 'grandes'
+			});
+			///
+			///
+			//////////////////////////////////////////////////////////////////////////////////////////
 
 			return(
 				<ul>
@@ -17,9 +31,41 @@ class Menu extends React.Component{
 					<li><a href="../index.php">INICIO</a></li>
 				</ul>
 			);
+
 		}else{
 
-			console.log(window.innerHeight);
+			//////////////////////////////////////////////////////////////////////////////////////////////////
+			///
+			///jQuery
+			$(function(){
+
+				var nav = $('#nav');
+
+				nav.addClass('nav2');					//Agregamos la clase nav2 para pantallas 'pequeñas'
+
+				var menu = $("#menu");
+
+				
+				menu.css("height",$(this).height());	//Adaptamos el menu a la pantalla
+
+				
+				$('#menu-icon').click(function(){		//Desplegar menu
+
+					menu.css("display", "flex");
+					menu.height($(window).height());
+					$('body').css("overflow", "hidden");
+					
+				});
+
+				
+				var cerrarIcon = $("#cerrar-menu");		//Cerrar el menu
+				cerrarIcon.click(function(){
+					menu.css("display", "none");
+					$('body').css("overflow", "scroll");
+				});
+
+			});
+			////////////////////////////////////////////////////////////////////////////////////////////////////
 
 			return(
 
@@ -52,3 +98,4 @@ class Menu extends React.Component{
 	}
 
 } export default Menu;
+
