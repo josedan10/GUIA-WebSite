@@ -1,22 +1,10 @@
-// import './navbar.js';
-// import './scroll.js';
-// import './responsive.js';
-// 
-
-
+import './navbar.js';
+import './scroll.js';
+import './responsive.js';
+import Menu from './nav.jsx';
 import React from "react";
-import ReactDOM from "react-dom";
+import ReactDOM from "react-dom";	
 
-class Salida extends React.Component{
+const nav = document.getElementById("nav");
 
-	render() {
-		return(
-			<h1>React está funcionando en tiempo real en este momento</h1>
-		);
-	}
-}
-
-const app = document.getElementById('app');
-
-ReactDOM.render(<Salida />, app);
-//location.reload(true);
+ReactDOM.render(<Menu />, nav);
