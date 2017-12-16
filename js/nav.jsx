@@ -2,6 +2,180 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 
 
+class NavLink extends React.Component{
+
+	
+
+	constructor(ruta, paths, articulo, links, props){
+
+		super(props);
+		this.state = "";
+		
+	}
+
+	asignarRuta(){
+
+		var ruta = "";
+		var paths = ['/Sirius/', '/Calendario/'];
+		var articulo = /[/]Sirius[/]\w+(\s|\w|[-.+])+/;
+		var links = {
+							Sirius:
+								{inicio: '../', local: '../index.php#', 
+							 	calendario: '../Calendario/',blog: '#'},
+
+							Calendario:
+								{inicio: '../', local: '../index.php#', 
+							 	calendario: '#', blog: '../Sirius/'},
+
+							Articulo:
+								{inicio: '../../', local: '../../index.php#/',
+						 		calendario: '../../Calendario/', blog: '../'},
+
+						 	Inicio:
+								{inicio: '#', local: '#', 
+								calendario: 'Calendario/', blog: 'Sirius/'}
+					};
+
+		//Dependiendo de la ruta actual, se usan direcciones diferentes
+		switch (location.pathname){
+
+			case paths[0]:
+				//Estamos en el blog de Sirius
+				
+				switch (this.props.value){
+
+					case 'inicio':
+
+						ruta = links.Sirius.inicio;
+						break;
+
+					case 'nosotros':
+					case 'contacto':
+					case 'miembros':
+
+						ruta = links.Sirius.local + this.props.value;
+						break;
+
+					case 'Calendario':
+
+						ruta = links.Sirius.calendario;
+						break;
+
+					case 'Sirius':
+
+						ruta = links.Sirius.blog;
+						break;
+				}
+				
+				break;
+
+			case paths[1]:
+				//Estamos en el Calendario
+				
+				switch (this.props.value){
+
+					case 'inicio':
+
+						ruta = links.Calendario.inicio;
+						break;
+
+					case 'nosotros':
+					case 'contacto':
+					case 'miembros':
+
+						ruta = links.Calendario.local + this.props.value;
+						break;
+
+					case 'Calendario':
+
+						ruta = links.Calendario.calendario;
+						break;
+
+					case 'Sirius':
+
+						ruta = links.Calendario.blog;
+						break;
+				}
+				
+				break;
+
+			default:
+				
+				
+				if(articulo.test(location.pathname)){	//Estamos en algún artículo
+
+					switch (this.props.value){
+
+						case 'inicio':
+
+							ruta = links.Articulo.inicio;
+							break;
+
+						case 'nosotros':
+						case 'contacto':
+						case 'miembros':
+
+							ruta = links.Articulo.local + this.props.value;
+							break;
+
+						case 'Calendario':
+
+							ruta = links.Articulo.calendario;
+							break;
+
+						case 'Sirius':
+
+							ruta = links.Articulo.blog;
+							break;
+					}
+
+				}else{										//Estamos en alguna parte del inicio
+					
+					switch (this.props.value){
+
+						case 'inicio':
+
+							ruta = links.Inicio.inicio;
+							break;
+
+						case 'nosotros':
+						case 'contacto':
+						case 'miembros':
+
+							ruta = links.Inicio.local + this.props.value;
+							break;
+
+						case 'Calendario':
+
+							ruta = links.Inicio.calendario;
+							break;
+
+						case 'Sirius':
+
+							ruta = links.Inicio.blog;
+							break;
+					}
+			
+				}
+
+				break;
+		}
+
+		return ruta;
+
+	}
+
+
+	
+	
+	render(){
+		const link = this.asignarRuta();
+		return(
+			<a href={link}>{this.props.value.toUpperCase()}</a>
+		);
+	}
+} //export default NavLink;
+
 
 class Menu extends React.Component{
 
@@ -23,12 +197,12 @@ class Menu extends React.Component{
 
 			return(
 				<ul>
-					<li><a href="../index.php#contacto">CONTACTO</a></li>
-					<li><a href="../Calendario/index.php">CALENDARIO</a></li>
-					<li><a href="index.php">SIRIUS</a></li>
-					<li><a href="../index.php#miembros">MIEMBROS</a></li>
-					<li><a href="../index.php#nosotros">NOSOTROS</a></li>
-					<li><a href="../index.php">INICIO</a></li>
+					<li><NavLink value="contacto"/></li>
+					<li><NavLink value="Calendario"/></li>
+					<li><NavLink value="Sirius"/></li>
+					<li><NavLink value="miembros"/></li>
+					<li><NavLink value="nosotros"/></li>
+					<li><NavLink value="inicio"/></li>
 				</ul>
 			);
 
@@ -76,19 +250,19 @@ class Menu extends React.Component{
 						<span className="icon icon-cross" id="cerrar-menu"></span>
 
 						<div className="grupo">
-							<div><a href="#inicio" className="cerrar"><span className="icon icon-home"></span>INICIO</a></div>
+							<div><span className="icon icon-home"></span><NavLink value="inicio" /></div>
 							
-							<div><a href="#nosotros" className="cerrar"><span className="icon icon-rocket"></span>NOSOTROS</a></div>
+							<div><span className="icon icon-rocket"></span><NavLink value="nosotros" /></div>
 							
-							<div><a href="#miembros" className="cerrar"><span className="icon icon-users"></span>MIEMBROS</a></div>
+							<div><span className="icon icon-users"></span><NavLink value="miembros" /></div>
 						</div>
 
 						<div className="grupo">
-							<div><a href="Sirius/index.php"><span className="icon icon-open-book"></span>SIRIUS</a></div>
+							<div><span className="icon icon-open-book"></span><NavLink value="Sirius"/></div>
 							
-							<div><a href="Calendario/index.php"><span className="icon icon-calendar"></span>CALENDARIO</a></div>
+							<div><span className="icon icon-calendar"></span><NavLink value="Calendario" /></div>
 							
-							<div><a href="#contacto" className="cerrar"><span className="icon icon-mail"></span>CONTACTO</a></div>
+							<div><span className="icon icon-mail"></span><NavLink value="contactoS" /></div>
 						</div>
 
 					</div>
