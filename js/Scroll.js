@@ -15,7 +15,7 @@ $(document).ready(function(){
 	linkMiembros.click(animacionDeScroll);
 	linkContacto.click(animacionDeScroll);
 
-	function animacionDeScroll(){
+	function animacionDeScroll(event){
 
 		// Verificamos que el hash no sea nulo o undefined
 	    if (this.hash !== "") {

@@ -237,6 +237,7 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.2/js/swiper.min.js"></script>
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
 	<script src="dist/bundle.min.js"></script>
+	<script src="js/Scroll.js"></script>
 	<script src="js/subVerify.js"></script>
 
 	<script>

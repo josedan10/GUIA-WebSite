@@ -14,8 +14,8 @@ class NavLink extends React.Component{
 	asignarRuta(){
 
 		var ruta = "";
-		const paths = ['/Sirius/', '/Calendario/'];
-		const articulo = /[/]Sirius[/]\w+(\s|\w|[-.+])+/;
+		const paths = ['/GUIA-WebSite/Sirius/', '/GUIA-WebSite/Calendario/'];
+		const articulo = /[/]GUIA-WebSite[/]Sirius[/]\w+(\s|\w|[-.+])+/;
 
 		//IMPORTANTE:
 		//Al subir los archivos a las páginas se debe modificar la ruta porque no estarán en la
@@ -23,19 +23,19 @@ class NavLink extends React.Component{
 		
 		const links = {
 							Sirius:
-								{inicio: '../GUIA-WebSite', local: '../GUIA-WebSite/index.php#', 
+								{inicio: '../', local: '../GUIA-WebSite/index.php#', 
 							 	calendario: '../Calendario/',blog: '#'},
 
 							Calendario:
-								{inicio: '../GUIA-WebSite', local: '../GUIA-WebSite/index.php#', 
+								{inicio: '../', local: '../GUIA-WebSite/index.php#', 
 							 	calendario: '#', blog: '../Sirius/'},
 
 							Articulo:
-								{inicio: '../../GUIA-WebSite', local: '../../GUIA-WebSite/index.php#/',
+								{inicio: '../../', local: '../../GUIA-WebSite/index.php#/',
 						 		calendario: '../../Calendario/', blog: '../'},
 
 						 	Inicio:
-								{inicio: '/GUIA-WebSite', local: '#', 
+								{inicio: '#inicio', local: '#', 
 								calendario: 'Calendario/', blog: 'Sirius/'}
 					};
 
@@ -302,7 +302,7 @@ class Menu extends React.Component{
 							
 							<div><NavLink value="Calendario" tipo="2"/></div>
 							
-							<div><NavLink value="contactoS" tipo="2"/></div>
+							<div><NavLink value="contacto" tipo="2"/></div>
 						</div>
 
 					</div>
