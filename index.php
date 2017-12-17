@@ -225,7 +225,7 @@
 					<input name="nombre" type="text" maxlength="150" placeholder="Nombre" required />
 					<input name="email" type="email" maxlength="150" placeholder="Correo" required />
 					<textarea name="mensaje" id="mensaje" cols="30" rows="10" draggable="false" maxlength="500" placeholder="Escribe aquí tu comentario ..." required></textarea> 
-					<input type="submit" class="btn btn1" />
+					<input type="submit" class="btn btn1" value="Enviar"/>
 				</form>
 			</div>
 		</div>

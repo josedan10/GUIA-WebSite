@@ -9,30 +9,33 @@ class NavLink extends React.Component{
 	constructor(ruta, paths, articulo, links, props){
 
 		super(props);
-		this.state = "";
-		
 	}
 
 	asignarRuta(){
 
 		var ruta = "";
-		var paths = ['/Sirius/', '/Calendario/'];
-		var articulo = /[/]Sirius[/]\w+(\s|\w|[-.+])+/;
-		var links = {
+		const paths = ['/Sirius/', '/Calendario/'];
+		const articulo = /[/]Sirius[/]\w+(\s|\w|[-.+])+/;
+
+		//IMPORTANTE:
+		//Al subir los archivos a las páginas se debe modificar la ruta porque no estarán en la
+		//carpeta 'GUIA-WebSite'
+		
+		const links = {
 							Sirius:
-								{inicio: '../', local: '../index.php#', 
+								{inicio: '../GUIA-WebSite', local: '../GUIA-WebSite/index.php#', 
 							 	calendario: '../Calendario/',blog: '#'},
 
 							Calendario:
-								{inicio: '../', local: '../index.php#', 
+								{inicio: '../GUIA-WebSite', local: '../GUIA-WebSite/index.php#', 
 							 	calendario: '#', blog: '../Sirius/'},
 
 							Articulo:
-								{inicio: '../../', local: '../../index.php#/',
+								{inicio: '../../GUIA-WebSite', local: '../../GUIA-WebSite/index.php#/',
 						 		calendario: '../../Calendario/', blog: '../'},
 
 						 	Inicio:
-								{inicio: '#', local: '#', 
+								{inicio: '/GUIA-WebSite', local: '#', 
 								calendario: 'Calendario/', blog: 'Sirius/'}
 					};
 
@@ -165,24 +168,64 @@ class NavLink extends React.Component{
 
 	}
 
+	asignarIcono(icono){
 
+		switch(icono){
+			case 'inicio':
+				return "icon icon-home";
+				break;
+
+			case 'nosotros':
+				return "icon icon-rocket";
+				break;
+
+			case 'miembros':
+				return "icon icon-users";
+				break;
+
+			case 'Calendario':
+				return "icon icon-calendar";
+				break;
+
+			case 'Sirius':
+				return "icon icon-open-book";
+				break;
+
+			case 'contacto':
+				return "icon icon-mail";
+				break;
+		}
+	}
 	
 	
 	render(){
-		const link = this.asignarRuta();
-		return(
-			<a href={link}>{this.props.value.toUpperCase()}</a>
-		);
+
+		if(this.props.tipo == "2"){
+
+			//Nav móvil
+			return(
+				<a href={this.asignarRuta()}><span className={this.asignarIcono(this.props.value)}></span>{this.props.value.toUpperCase()}</a>
+			);
+		}else{
+
+			//Nav standard
+			return(
+				<a href={this.asignarRuta()}>{this.props.value.toUpperCase()}</a>
+			);
+		}
 	}
-} //export default NavLink;
+}
 
 
 class Menu extends React.Component{
 
+	constructor(props){
+		super(props);
+	}
+
 	render(){
 
 		if(window.innerWidth > 900){
-
 			///////////////////////////////////////////////////////////////////////////////////////////
 			///
 			///jQuery
@@ -195,14 +238,11 @@ class Menu extends React.Component{
 			///
 			//////////////////////////////////////////////////////////////////////////////////////////
 
+			const pathNames = ['contacto', 'Calendario', 'Sirius', 'miembros', 'nosotros', 'inicio'];
+
 			return(
 				<ul>
-					<li><NavLink value="contacto"/></li>
-					<li><NavLink value="Calendario"/></li>
-					<li><NavLink value="Sirius"/></li>
-					<li><NavLink value="miembros"/></li>
-					<li><NavLink value="nosotros"/></li>
-					<li><NavLink value="inicio"/></li>
+					{pathNames.map((link, i) => <li><NavLink value={link} key={'link_' + i} tipo="1" /></li>)}				
 				</ul>
 			);
 
@@ -250,19 +290,19 @@ class Menu extends React.Component{
 						<span className="icon icon-cross" id="cerrar-menu"></span>
 
 						<div className="grupo">
-							<div><span className="icon icon-home"></span><NavLink value="inicio" /></div>
+							<div><NavLink value="inicio" tipo="2"/></div>
 							
-							<div><span className="icon icon-rocket"></span><NavLink value="nosotros" /></div>
+							<div><NavLink value="nosotros" tipo="2"/></div>
 							
-							<div><span className="icon icon-users"></span><NavLink value="miembros" /></div>
+							<div><NavLink value="miembros" tipo="2"/></div>
 						</div>
 
 						<div className="grupo">
-							<div><span className="icon icon-open-book"></span><NavLink value="Sirius"/></div>
+							<div><NavLink value="Sirius" tipo="2"/></div>
 							
-							<div><span className="icon icon-calendar"></span><NavLink value="Calendario" /></div>
+							<div><NavLink value="Calendario" tipo="2"/></div>
 							
-							<div><span className="icon icon-mail"></span><NavLink value="contactoS" /></div>
+							<div><NavLink value="contactoS" tipo="2"/></div>
 						</div>
 
 					</div>
