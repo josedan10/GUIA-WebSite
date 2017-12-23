@@ -5,19 +5,14 @@
 	position: fixed;
 	top: 0;
 	width: 100%;
+	display: flex;
+	justify-content: space-between;
 
 	z-index: 2;
 
-	svg{
-		height: 100%;
-		display: inline-block;
+	img{
+		height: 74px;
 		margin-left: 40px;
-	}
-
-	#menu-nav{
-
-		display: inline-block;
-		float: right;
 	}
 }
 
@@ -50,6 +45,10 @@
 
 
 .nav2{
+
+	#menu-nav{
+		height: 74px;
+	}
 	
 	span[class*="icon-menu"]{
 		width: 74px;

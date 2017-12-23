@@ -140,6 +140,7 @@ footer{
 	font: $texto-peq;
 	color: $pastel;
 	display: flex;
+	justify-content: space-around;
 	
 
 	p{	
@@ -153,7 +154,6 @@ footer{
 	.social{
 
 		margin-top: 10px;
-		margin: 10px auto 0;
 
 		display: flex;
 		flex-wrap: wrap;
@@ -185,7 +185,7 @@ footer{
 	}
 
 	.developer{
-		margin: 10px auto 0;
+		margin-top: 10px;
 		text-align: center;
 		//min-width: 200px;
 	}

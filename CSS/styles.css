@@ -137,7 +137,8 @@ footer {
   background: #2B0C47;
   font: normal 12px "Roboto", "Arial", sans-serif;
   color: #F5F5F5;
-  display: flex; }
+  display: flex;
+  justify-content: space-around; }
   footer p {
     display: block;
     margin: 0 auto;
@@ -145,7 +146,6 @@ footer {
     width: 100%; }
   footer .social {
     margin-top: 10px;
-    margin: 10px auto 0;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -166,7 +166,7 @@ footer {
           font-size: 20px;
           margin-right: 10px; }
   footer .developer {
-    margin: 10px auto 0;
+    margin-top: 10px;
     text-align: center; }
 
 .nav1, .nav2 {
@@ -176,14 +176,12 @@ footer {
   position: fixed;
   top: 0;
   width: 100%;
+  display: flex;
+  justify-content: space-between;
   z-index: 2; }
-  .nav1 svg, .nav2 svg {
-    height: 100%;
-    display: inline-block;
+  .nav1 img, .nav2 img {
+    height: 74px;
     margin-left: 40px; }
-  .nav1 #menu-nav, .nav2 #menu-nav {
-    display: inline-block;
-    float: right; }
 
 .nav1 #menu-nav ul {
   display: block;
@@ -200,6 +198,8 @@ footer {
       .nav1 #menu-nav ul li a:hover {
         color: #24B156; }
 
+.nav2 #menu-nav {
+  height: 74px; }
 .nav2 span[class*="icon-menu"] {
   width: 74px;
   height: 74px;
@@ -488,12 +488,6 @@ footer {
 
 /*Responsive*/
 @media only screen and (max-width: 900px) {
-  .nav1 {
-    display: none; }
-
-  .nav2 {
-    display: block; }
-
   .contacto,
   .miembros,
   .nosotros {
@@ -531,7 +525,7 @@ footer {
       .main .container .presentacion .imagen .detalles {
         padding: 0 10px; } }
 @media only screen and (max-width: 600px) {
-  .nav2 svg {
+  .nav2 img {
     margin-left: 10px; }
 
   .suscripcion > div:first-child {

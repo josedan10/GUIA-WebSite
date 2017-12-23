@@ -1,14 +1,6 @@
 /*Responsive*/
 
 @media only screen and (max-width: 900px) {
-    .nav1 {
-        display: none;
-    }
-
-    .nav2{
-    	display: block;
-
-    }
 
     .contacto,
     .miembros,
@@ -84,7 +76,7 @@
 @media only screen and (max-width: 600px){
 
 	.nav2{
-		svg{
+		img{
 			margin-left: 10px;
 		}
 	}
