@@ -158,13 +158,12 @@ footer {
       justify-content: space-around; }
       footer .social .icons a {
         color: #F5F5F5;
-        padding: 5px;
+        padding: 5px 5px;
         box-sizing: border-box; }
         footer .social .icons a span {
           box-sizing: border-box;
           display: inline-block;
-          font-size: 20px;
-          margin-right: 10px; }
+          font-size: 20px; }
   footer .developer {
     margin-top: 10px;
     text-align: center; }
@@ -284,21 +283,28 @@ footer {
         .container .presentacion .calendario .div-dias .dia,
         .container .presentacion .calendario .div-dias .dia-evento,
         .container .presentacion .calendario .div-dias .dia-nombre,
-        .container .presentacion .calendario .div-dias .dia-inactivo {
+        .container .presentacion .calendario .div-dias .dia-inactivo,
+        .container .presentacion .calendario .div-dias .dia-actual {
           width: 40px;
           height: 40px;
           margin: 0 10px;
           font: normal 14px "Roboto", "Arial", sans-serif;
           border-radius: 50%;
-          text-align: center;
+          display: flex;
+          justify-content: center;
+          align-items: center;
           padding: 10px;
           box-sizing: border-box; }
         .container .presentacion .calendario .div-dias .dia-evento {
           background: #24B156;
           color: #24B156; }
-        .container .presentacion .calendario .div-dias .dia {
+        .container .presentacion .calendario .div-dias .dia-actual {
           background: #2B0C47;
           color: #F5F5F5; }
+        .container .presentacion .calendario .div-dias .dia {
+          border: 1px solid #2B0C47;
+          background: #F5F5F5;
+          color: #2B0C47; }
         .container .presentacion .calendario .div-dias .dia-inactivo {
           background: #F5F5F5;
           color: #F5F5F5; }
@@ -309,6 +315,18 @@ footer {
           margin-left: 0; }
         .container .presentacion .calendario .div-dias .dia-final {
           margin-right: 0; }
+      .container .presentacion .calendario .detalles {
+        font: normal 14px "Roboto", "Arial", sans-serif;
+        padding: 20px 0;
+        display: flex;
+        justify-content: space-around; }
+        .container .presentacion .calendario .detalles div {
+          display: flex;
+          justify-content: center;
+          flex-wrap: wrap; }
+          .container .presentacion .calendario .detalles div h3 {
+            width: 100%;
+            text-align: center; }
     .container .presentacion .imagen {
       max-width: 500px;
       position: relative; }
@@ -316,18 +334,20 @@ footer {
         width: 80%;
         display: block;
         margin: 0 auto; }
-      .container .presentacion .imagen .detalles {
+      .container .presentacion .imagen .resumen {
         padding: 20px 0 0;
         box-sizing: border-box; }
-        .container .presentacion .imagen .detalles h3 {
+        .container .presentacion .imagen .resumen h3 {
           width: 80%;
           text-align: center;
           margin: 0 auto 10px; }
-        .container .presentacion .imagen .detalles p {
-          display: none;
+        .container .presentacion .imagen .resumen p {
+          text-align: justify;
           width: 80%;
           font: normal 14px "Roboto", "Arial", sans-serif;
-          margin: auto; }
+          margin: auto;
+          padding: 10px 0 30px;
+          max-height: 100px; }
 
 .swiper-container {
   margin-top: 74px;

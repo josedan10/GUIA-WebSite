@@ -1,0 +1,68 @@
+{
+	//Archivo de maqueta para recibir datos de la consulta a la BD
+	"enero": {
+
+		"evento1":{
+			"resumen": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero, illo optio voluptatem minus molestiae neque facilis. Veniam nesciunt deserunt provident delectus ea, distinctio necessitatibus debitis ut qui, tempora est, et.",
+			"fecha": "14/01",
+			"hora": "9:30 am - 11:30 am"
+		},
+
+		"evento2":{
+			"resumen": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis doloribus excepturi corrupti dicta incidunt, corporis hic enim blanditiis totam, iure vero quibusdam fuga, soluta neque praesentium ea temporibus. Beatae, in.",
+			"fecha": "18/01",
+			"hora": "11:30 am - 1:30 pm"
+		},
+
+		"evento3":{
+			"resumen": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero, illo optio voluptatem minus molestiae neque facilis. Veniam nesciunt deserunt provident delectus ea, distinctio necessitatibus debitis ut qui, tempora est, et.",
+			"fecha": "22/01",
+			"hora": "9:30 am - 1:30 pm"
+		}		
+
+	},
+
+	"febrero": {
+
+		"evento1":{
+			"resumen": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero, illo optio voluptatem minus molestiae neque facilis. Veniam nesciunt deserunt provident delectus ea, distinctio necessitatibus debitis ut qui, tempora est, et.",
+			"fecha": "14/01",
+			"hora": "9:30 am - 11:30 am"
+		},
+
+		"evento2":{
+			"resumen": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis doloribus excepturi corrupti dicta incidunt, corporis hic enim blanditiis totam, iure vero quibusdam fuga, soluta neque praesentium ea temporibus. Beatae, in.",
+			"fecha": "18/01",
+			"hora": "11:30 am - 1:30 pm"
+		},
+
+		"evento3":{
+			"resumen": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero, illo optio voluptatem minus molestiae neque facilis. Veniam nesciunt deserunt provident delectus ea, distinctio necessitatibus debitis ut qui, tempora est, et.",
+			"fecha": "22/01",
+			"hora": "9:30 am - 1:30 pm"
+		}	
+
+	},
+
+	"marzo": {
+
+		"evento1":{
+			"resumen": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero, illo optio voluptatem minus molestiae neque facilis. Veniam nesciunt deserunt provident delectus ea, distinctio necessitatibus debitis ut qui, tempora est, et.",
+			"fecha": "14/01",
+			"hora": "9:30 am - 11:30 am"
+		},
+
+		"evento2":{
+			"resumen": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis doloribus excepturi corrupti dicta incidunt, corporis hic enim blanditiis totam, iure vero quibusdam fuga, soluta neque praesentium ea temporibus. Beatae, in.",
+			"fecha": "18/01",
+			"hora": "11:30 am - 1:30 pm"
+		},
+
+		"evento3":{
+			"resumen": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero, illo optio voluptatem minus molestiae neque facilis. Veniam nesciunt deserunt provident delectus ea, distinctio necessitatibus debitis ut qui, tempora est, et.",
+			"fecha": "22/01",
+			"hora": "9:30 am - 1:30 pm"
+		}	
+
+	}
+}

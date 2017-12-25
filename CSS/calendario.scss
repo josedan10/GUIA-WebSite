@@ -58,14 +58,17 @@
 				.dia,
 				.dia-evento,
 				.dia-nombre,
-				.dia-inactivo{
+				.dia-inactivo,
+				.dia-actual{
 			
 					width: 40px;
 					height: 40px;
 					margin: 0 10px;
 					font: $texto;
 					border-radius: 50%;
-					text-align: center;
+					display: flex;
+					justify-content: center;
+					align-items: center;
 
 					padding: 10px;
 					box-sizing: border-box;
@@ -77,10 +80,16 @@
 					color: $aguamarina;
 				}
 
-				.dia{
-
+				.dia-actual{
 					background: $morado-ppal;
 					color: $pastel;
+				}
+
+				.dia{
+					
+					border: 1px solid $morado-ppal;
+					background: $pastel;
+					color: $morado-ppal;
 				}
 
 				.dia-inactivo{
@@ -103,6 +112,25 @@
 					margin-right: 0;
 				}
 			}
+
+			.detalles{
+				font: $texto;
+				padding: 20px 0;
+
+				display: flex;
+				justify-content: space-around;
+
+				div{
+					display: flex;
+					justify-content: center;
+					flex-wrap: wrap;
+
+					h3{
+						width: 100%;
+						text-align: center;
+					}
+				}
+			}
 			
 		}
 
@@ -117,7 +145,7 @@
 				margin: 0 auto;
 			}
 
-			.detalles{
+			.resumen{
 				
 				padding: 20px 0 0;
 				box-sizing: border-box;
@@ -130,11 +158,13 @@
 				}
 
 				p{
-					display: none;
+					//display: none;
+					text-align: justify;
 					width: 80%;
 					font: $texto;
 					margin: auto;	
-					//padding: 0 30px;
+					padding: 10px 0 30px;
+					max-height: 100px;
 				}
 			}
 		}
