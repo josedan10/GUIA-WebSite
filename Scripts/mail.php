@@ -1,5 +1,7 @@
 <?php 
 	
+	include 'suscripcion.php';
+
 	$nombre = $_POST["nombre"];
 	$email = $_POST['email'];
 	$subject = "Suscripción a Sirius";
@@ -25,10 +27,15 @@
 	if((isset($_POST['nombre']) && !empty($_POST['nombre'])) 
 		&& (isset($_POST['email']) && !empty($_POST['email']))){
 
-		
+		if(agregarSuscriptor($email, $nombre)){
 
-		mail($email, $subject, $msg, implode("\r\n", $headers));
-		echo 'Mensaje enviado';
+			mail($email, $subject, $msg, implode("\r\n", $headers));
+			echo 'Mensaje enviado';
+
+		}else{
+			echo 'Fallo al suscribirse';
+		}
+
 
 	}else{
 

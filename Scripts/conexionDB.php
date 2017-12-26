@@ -31,7 +31,7 @@
 
 	$arrayFecha = explode("/", $fechaCompleta); 	//Array de la fecha
 	$mesActual = $Meses[$arrayFecha[2]];			//Mes actual
-	$diaSemana = $arrayFecha[1]; 					//Dia de la semana correspondiente a con el array $DiasMeses
+	$diaSemana = $arrayFecha[1]; 					//Dia actual
 
 
 	//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////

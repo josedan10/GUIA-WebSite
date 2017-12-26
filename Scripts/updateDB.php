@@ -1,17 +1,6 @@
 <?php 
 	
-	$Meses = array(1 => 'Enero', 2 => 'Febrero', 3 => 'Marzo', 4 => 'Abril', 5 => 'Mayo', 6 => 'Junio',	7 => 'Julio', 8 => 'Agosto', 9 => 'Septiembre', 10 => 'Octubre', 11 => 'Noviembre', 12 => 'Diciembre');
-
-	$diasSemana = array("Sunday" => 1, "Monday" => 2, "Tuesday" => 3, "Wednesday" => 4, "Thursday" => 5, "Friday" => 6, "Saturday" => 7);
-
-
-	//Actualización de la BD
-	$fechaCompleta = date('Y/d/m');
-	$arrayFecha = explode("/", $fechaCompleta); //Arreglo de la fecha
-	$mesActual = $Meses[$arrayFecha[2]];		//Mes actual en número
-	$diaSemana = $arrayFecha[1];				//Dia Semana actual en número
-	$varDia = $diasSemana[date('l')];			//Dia de la semana correspondiente al array $diasSemana
-
+	include 'conexionDB.php';
 
 	//El 31 de Diciembre de cada año se actualiza
 
