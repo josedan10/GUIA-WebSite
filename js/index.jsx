@@ -1,12 +1,14 @@
 //import './scroll.js';
 import './responsive.js';
-import Menu from './nav.jsx';
+//import NavBar from './nav';
+import {MenuNav} from './nav';
 import React from "react";
 import ReactDOM from "react-dom";	
 
+const app = document.getElementById("app");
 const menuNav = document.getElementById("menu-nav");
 
-ReactDOM.render(<Menu />, menuNav);
+ReactDOM.render(<MenuNav />, menuNav);
 
 
 $(document).ready(function(){
@@ -21,7 +23,7 @@ $(document).ready(function(){
 		nav.removeClass('nav2');
 		menu.css("height",$(this).height());
 
-		ReactDOM.render(<Menu />, menuNav);
+		ReactDOM.render(<MenuNav />, menuNav);
 
 	})
 

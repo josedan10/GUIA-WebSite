@@ -1,6 +1,55 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
+// export default class NavBar extends React.Component{
+	
+// 	constructor(props){
+// 		super(props);
+// 	}
+
+// 	imgSrc(){
+
+// 		//La ruta de la imagen es distinta dependiendo del path actual
+// 		var ruta = "";
+// 		const paths = ['/GUIA-Website/Sirius/', '/GUIA-Website/Calendario/'];
+// 		const articulo = /[/]GUIA-WebSite[/]Sirius[/]\w+(\s|\w|[-.+])+/;
+
+// 		const links = {
+// 			articulo: "../../Imagenes/guia-logo.svg",
+// 			seccion: "../Imagenes/guia-logo.svg",
+// 			inicio: "Imagenes/guia-logo.svg"
+// 		}
+
+// 		switch(location.pathname){
+
+// 			case paths[0]:
+// 			case paths[1]:
+
+// 				ruta = links.seccion;
+// 				break;
+
+// 			default:
+
+// 				if(articulo.test(location.pathname)){  	//Estamos en un artículo
+// 					ruta = links.articulo;
+// 				}else{									//Estamos en el inicio
+// 					ruta = links.inicio;
+// 				}
+
+// 				break;
+// 		}
+
+// 		return ruta;
+// 	}
+
+// 	render(){
+// 		<nav id="nav">
+// 			<img src={this.imgSrc()} />
+// 			<MenuNav />
+// 		</nav>
+// 	}
+// }
+
 
 class NavLink extends React.Component{
 
@@ -14,8 +63,11 @@ class NavLink extends React.Component{
 	asignarRuta(){
 
 		var ruta = "";
-		const paths = ['/GUIA-WebSite/Sirius/', '/GUIA-WebSite/Calendario/'];
-		const articulo = /[/]GUIA-WebSite[/]Sirius[/]\w+(\s|\w|[-.+])+/;
+
+		const paths = ['/GUIA-Website/Sirius/', '/GUIA-Website/Calendario/'];
+		const articulo = /\/GUIA-Website\/Sirius\/\w+\/\w+[.]\w+/;
+		// const paths = ['/Sirius/', '/Calendario/'];
+		// const articulo = /\/Sirius\/\w+\/\w+[.]\w+/;
 
 		//IMPORTANTE:
 		//Al subir los archivos a las páginas se debe modificar la ruta porque no estarán en la
@@ -23,15 +75,15 @@ class NavLink extends React.Component{
 		
 		const links = {
 							Sirius:
-								{inicio: '../', local: '../GUIA-WebSite/index.php#', 
+								{inicio: '../', local: '../index.php#', 
 							 	calendario: '../Calendario/',blog: '#'},
 
 							Calendario:
-								{inicio: '../', local: '../GUIA-WebSite/index.php#', 
+								{inicio: '..', local: '../index.php#', 
 							 	calendario: '#', blog: '../Sirius/'},
 
 							Articulo:
-								{inicio: '../../', local: '../../GUIA-WebSite/index.php#/',
+								{inicio: '../../', local: '../../index.php#',
 						 		calendario: '../../Calendario/', blog: '../'},
 
 						 	Inicio:
@@ -103,6 +155,8 @@ class NavLink extends React.Component{
 				break;
 
 			default:
+
+				console.log(articulo.test(location.pathname));
 				
 				
 				if(articulo.test(location.pathname)){	//Estamos en algún artículo
@@ -217,7 +271,7 @@ class NavLink extends React.Component{
 }
 
 
-class Menu extends React.Component{
+export class MenuNav extends React.Component{
 
 	constructor(props){
 		super(props);
@@ -242,7 +296,7 @@ class Menu extends React.Component{
 
 			return(
 				<ul>
-					{pathNames.map((link, i) => <li><NavLink value={link} key={'link_' + i} tipo="1" /></li>)}				
+					{pathNames.map((link) => <li><NavLink value={link} key={link} tipo="1" /></li>)}
 				</ul>
 			);
 
@@ -311,5 +365,5 @@ class Menu extends React.Component{
 		}
 	}
 
-} export default Menu;
+}
 
