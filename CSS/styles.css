@@ -168,6 +168,30 @@ footer {
     margin-top: 10px;
     text-align: center; }
 
+.mail {
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  background: #2B0C47;
+  color: #F5F5F5; }
+  .mail h1 {
+    font: bold 30px "Roboto", "Arial", sans-serif;
+    text-align: center;
+    width: 60%; }
+  .mail p {
+    width: 100%;
+    font: normal 14px "Roboto", "Arial", sans-serif;
+    padding: 50px;
+    text-align: center; }
+  .mail img {
+    width: 300px; }
+  .mail h2 {
+    width: 100%;
+    text-align: center; }
+
 .nav1, .nav2 {
   background: rgba(43, 12, 71, 0.9);
   color: #F5F5F5;
@@ -427,27 +451,29 @@ footer {
       text-align: justify; }
       .blog article .articulo p {
         margin-bottom: 20px; }
-    .blog article .btn {
-      border: none;
-      background: #2B0C47;
-      font: normal 20px "Play", "Arial", sans-serif;
-      padding: 10px;
-      margin-top: 20px; }
-      .blog article .btn a {
+    .blog article a {
+      text-decoration: none; }
+      .blog article a .btn {
+        border: none;
+        background: #2B0C47;
         color: #F5F5F5;
-        text-decoration: none; }
-      .blog article .btn:hover {
-        cursor: pointer; }
-      .blog article .btn:active {
-        background: #24B156; }
+        font: normal 20px "Play", "Arial", sans-serif;
+        padding: 10px;
+        margin-top: 20px; }
+        .blog article a .btn:hover {
+          cursor: pointer; }
+        .blog article a .btn:active {
+          background: #24B156; }
 
 .busqueda {
   margin-bottom: 50px;
   position: relative; }
   .busqueda input {
     padding: 10.5px;
+    box-sizing: border-box;
     font: normal 14px "Roboto", "Arial", sans-serif;
-    border: solid 1px #2B0C47; }
+    border: solid 1px #2B0C47;
+    width: 100%; }
   .busqueda span {
     display: inline-block;
     font-size: 30px;
@@ -456,7 +482,7 @@ footer {
     position: absolute;
     bottom: 0;
     right: 0;
-    padding: 5px; }
+    padding: 6px; }
     .busqueda span:hover {
       cursor: pointer; }
 

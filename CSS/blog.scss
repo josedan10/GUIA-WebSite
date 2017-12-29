@@ -44,28 +44,26 @@
 			}
 		}
 
+		a{
+			text-decoration: none;
 
-		.btn{
-			border: none;
-			background: $morado-ppal;
-			font: $btn;
-			padding: 10px;
-			margin-top: 20px;
-
-			a{
+			.btn{
+				border: none;
+				background: $morado-ppal;
 				color: $pastel;
-				text-decoration: none;
-			}
+				font: $btn;
+				padding: 10px;
+				margin-top: 20px;
 
-			&:hover{
-				cursor: pointer;
-			}
-			
-			&:active{
-				background:$aguamarina;
+				&:hover{
+					cursor: pointer;
+				}
+				
+				&:active{
+					background:$aguamarina;
+				}
 			}
 		}
-			
 	}
 }
 
@@ -79,8 +77,10 @@
 	input{
 		
 		padding: 10.5px;
+		box-sizing: border-box;
 		font: $texto;
 		border: solid 1px $morado-ppal;
+		width: 100%;
 	}
 
 	span{
@@ -91,7 +91,7 @@
 		position: absolute;
 		bottom: 0;
 		right: 0;
-		padding: 5px;
+		padding: 6px;
 
 		&:hover{
 			cursor: pointer;
