@@ -170,3 +170,28 @@
 		}
 	}
 }
+
+.navigation-bar{
+	display: flex;
+	margin: 0 auto 20px;
+	justify-content: center;
+	align-items: center;
+	font: $texto;
+
+	span{
+		width: 15px;
+		padding: 5px 8px;
+		background: $morado-ppal;
+		color: $pastel;
+		text-align: center;
+		margin: 0 10px;
+
+		&:hover{
+			cursor: pointer;
+		}
+	}
+
+	.icon{
+		font-size: 19px;
+	}
+}

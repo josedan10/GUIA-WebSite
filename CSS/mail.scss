@@ -1,0 +1,33 @@
+.mail{
+
+	width: 90%;
+	margin: 0 auto;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+	background: $morado-ppal;
+	color: $pastel;
+
+	h1{
+		font: $titulo-h1;
+		text-align: center;
+		width: 60%;
+	}
+
+	p{
+		width: 100%;
+		font: $texto;
+		padding: 50px;
+		text-align: center;
+	}
+
+	img{
+		width: 300px;
+	}
+
+	h2{
+		width: 100%;
+		text-align: center;
+	}
+}

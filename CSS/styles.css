@@ -532,6 +532,24 @@ footer {
     .bloques-de-links ul li a:hover {
       color: #24B156; }
 
+.navigation-bar {
+  display: flex;
+  margin: 0 auto 20px;
+  justify-content: center;
+  align-items: center;
+  font: normal 14px "Roboto", "Arial", sans-serif; }
+  .navigation-bar span {
+    width: 15px;
+    padding: 5px 8px;
+    background: #2B0C47;
+    color: #F5F5F5;
+    text-align: center;
+    margin: 0 10px; }
+    .navigation-bar span:hover {
+      cursor: pointer; }
+  .navigation-bar .icon {
+    font-size: 19px; }
+
 /*Responsive*/
 @media only screen and (max-width: 900px) {
   .contacto,
