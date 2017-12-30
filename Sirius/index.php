@@ -14,24 +14,24 @@
 	    die("Connection failed: " . $conn->connect_error);
 	}
 
-	$Query = "SELECT COUNT(Titulo) AS TOTAL FROM articulo;";
+	$Query = "SELECT COUNT(Titulo) AS totalArticulos FROM articulo;";
 	$resultado = $conn->query($Query);
 
 	$row = $resultado->fetch_assoc();
 
-	//$TOTAL = $row["TOTAL"];
-	$TOTAL = 91;
+	//$totalArticulos = $row["totalArticulos"];
+	$totalArticulos = 91;
 	$maxPags = 10;
 
-	// switch($TOTAL%10){
+	// switch($totalArticulos%10){
 	// 	case 0:
-	// 		echo "El número total de páginas es: ".($TOTAL/10)."\n";
+	// 		echo "El número totalArticulos de páginas es: ".($totalArticulos/10)."\n";
 	// 		echo "En la última página hay 10 artículos";
 	// 		break;
 
 	// 	default:
-	// 		echo "El número total de páginas es: ".(floor($TOTAL/10) + 1)."\n";
-	// 		echo "En la última página hay ".($TOTAL%10)." artículos";
+	// 		echo "El número totalArticulos de páginas es: ".(floor($totalArticulos/10) + 1)."\n";
+	// 		echo "En la última página hay ".($totalArticulos%10)." artículos";
 	// 		break;
 	// }	
 ?>
@@ -74,7 +74,7 @@
 				$resultadoArticulos = $conn->query($queryArt);
 
 
-				if($TOTAL <= 10){
+				if($totalArticulos <= 10){
 					//Una sola página, no hace falta indice de navegación
 					
 					while($articulo = $resultadoArticulos->fetch_assoc()) {
@@ -88,6 +88,7 @@
 							
 							<img src='articulo1/imgArticule1.jpeg' alt='' />
 							<div class='articulo'>".$articulo["Contenido"]."</div>
+							<a href='articulo1'><button class='btn'>LEER MÁS</button></a>
 							
 						</article>";
 				    }
@@ -105,6 +106,7 @@
 							
 							<img src='articulo1/imgArticule1.jpeg' alt='' />
 							<div class='articulo'>".$articulo["Contenido"]."</div>
+							<a href='articulo1'><button class='btn'>LEER MÁS</button></a>
 							
 						</article>";
 				    }
@@ -112,16 +114,16 @@
 
 				$spans = "";
 
-				switch($TOTAL%10){
+				switch($totalArticulos%10){
 					case 0:
-						// echo "El número total de páginas es: ".($TOTAL/10)."\n";
+						// echo "El número totalArticulos de páginas es: ".($totalArticulos/10)."\n";
 						// echo "En la última página hay 10 artículos";
 
-						if(floor($TOTAL/10) > $maxPags){
+						if(floor($totalArticulos/10) > $maxPags){
 
-							$TOTAL = $maxPags;
+							$totalArticulos = $maxPags;
 
-							for($i = 1; $i <= (floor($TOTAL/10)); $i++){
+							for($i = 1; $i <= (floor($totalArticulos/10)); $i++){
 						    	$spans = $spans."<span>".$i."</span>";
 						    }
 
@@ -133,7 +135,7 @@
 
 						}else{
 
-							for($i = 1; $i <= floor($TOTAL/10) ; $i++){
+							for($i = 1; $i <= floor($totalArticulos/10) ; $i++){
 						    	$spans = $spans."<span>".$i."</span>";
 						    }
 
@@ -148,13 +150,13 @@
 						break;
 
 					default:
-						// echo "El número total de páginas es: ".(floor($TOTAL/10) + 1)."\n";
-						// echo "En la última página hay ".($TOTAL%10)." artículos";
+						// echo "El número totalArticulos de páginas es: ".(floor($totalArticulos/10) + 1)."\n";
+						// echo "En la última página hay ".($totalArticulos%10)." artículos";
 						
-						if(floor($TOTAL/10) + 1 > $maxPags){
-							$TOTAL = $maxPags;
+						if(floor($totalArticulos/10) + 1 > $maxPags){
+							$totalArticulos = $maxPags;
 
-							for($i = 1; $i <= (floor($TOTAL/10)); $i++){
+							for($i = 1; $i <= (floor($totalArticulos/10)); $i++){
 						    	$spans = $spans."<span>".$i."</span>";
 						    }
 
@@ -165,7 +167,7 @@
 						    ;
 						}else{
 
-							for($i = 1; $i <= (floor($TOTAL/10) + 1); $i++){
+							for($i = 1; $i <= (floor($totalArticulos/10) + 1); $i++){
 						    	$spans = $spans."<span>".$i."</span>";
 						    }
 
