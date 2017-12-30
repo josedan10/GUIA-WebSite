@@ -1,11 +1,15 @@
 const path = require('path');
-const webpack = require('webpack');
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 
 const config = {
   entry: [
     './js/index.jsx',
   ],
+
+  resolve: {
+    extensions: ['.js', '.jsx']
+  },
+
 
   output: {
     path: path.resolve(__dirname, 'dist'),
