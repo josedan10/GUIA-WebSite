@@ -290,15 +290,19 @@ footer {
         display: flex;
         margin-bottom: 10px;
         justify-content: space-between; }
-        .container .presentacion .calendario .mes .mesBlock {
+        .container .presentacion .calendario .mes select {
           font: normal 14px "Roboto", "Arial", sans-serif;
-          text-align: center;
-          padding: 5px 10px;
+          box-sizing: border-box;
           background: #2B0C47;
-          color: #F5F5F5; }
+          text-align: center;
+          padding: 0 10px;
+          border: none;
+          min-width: 120px;
+          color: #F5F5F5;
+          margin: 0 auto; }
       .container .presentacion .calendario .div-dias {
-        height: 300px;
-        max-width: 400px;
+        height: 290px;
+        width: 400px;
         display: flex;
         margin: 0 auto;
         padding-top: 10px;
@@ -311,7 +315,7 @@ footer {
         .container .presentacion .calendario .div-dias .dia-actual {
           width: 40px;
           height: 40px;
-          margin: 0 10px;
+          margin: 3px 10px;
           font: normal 14px "Roboto", "Arial", sans-serif;
           border-radius: 50%;
           display: flex;
@@ -319,9 +323,13 @@ footer {
           align-items: center;
           padding: 10px;
           box-sizing: border-box; }
+        .container .presentacion .calendario .div-dias .dia:hover,
+        .container .presentacion .calendario .div-dias .dia-evento:hover,
+        .container .presentacion .calendario .div-dias .dia-actual:hover {
+          cursor: pointer; }
         .container .presentacion .calendario .div-dias .dia-evento {
           background: #24B156;
-          color: #24B156; }
+          color: #2B0C47; }
         .container .presentacion .calendario .div-dias .dia-actual {
           background: #2B0C47;
           color: #F5F5F5; }
@@ -339,18 +347,27 @@ footer {
           margin-left: 0; }
         .container .presentacion .calendario .div-dias .dia-final {
           margin-right: 0; }
-      .container .presentacion .calendario .detalles {
+      .container .presentacion .calendario .detalles,
+      .container .presentacion .calendario .contador {
         font: normal 14px "Roboto", "Arial", sans-serif;
-        padding: 20px 0;
+        padding: 10px 0 15px;
         display: flex;
         justify-content: space-around; }
-        .container .presentacion .calendario .detalles div {
+        .container .presentacion .calendario .detalles div,
+        .container .presentacion .calendario .contador div {
           display: flex;
           justify-content: center;
           flex-wrap: wrap; }
-          .container .presentacion .calendario .detalles div h3 {
+          .container .presentacion .calendario .detalles div h3,
+          .container .presentacion .calendario .contador div h3 {
             width: 100%;
             text-align: center; }
+    .container .presentacion .evento-aux {
+      min-width: 300px;
+      height: 100vh;
+      position: relative;
+      background: #24B156;
+      display: none; }
     .container .presentacion .imagen {
       max-width: 500px;
       position: relative; }
@@ -575,6 +592,7 @@ footer {
         margin: 0 auto;
         width: 300px; }
         .main .container .presentacion .calendario .div-dias .dia,
+        .main .container .presentacion .calendario .div-dias .dia-actual,
         .main .container .presentacion .calendario .div-dias .dia-evento,
         .main .container .presentacion .calendario .div-dias .dia-nombre,
         .main .container .presentacion .calendario .div-dias .dia-inactivo {
@@ -587,7 +605,10 @@ footer {
     .main .container .presentacion .imagen {
       margin: 20px 0 0; }
       .main .container .presentacion .imagen .detalles {
-        padding: 0 10px; } }
+        padding: 0 10px; }
+    .main .container .presentacion .evento-aux {
+      width: 100%;
+      min-width: 0; } }
 @media only screen and (max-width: 600px) {
   .nav2 img {
     margin-left: 10px; }

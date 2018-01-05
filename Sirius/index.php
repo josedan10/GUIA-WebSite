@@ -186,44 +186,6 @@
 			    
 
 			?>
-			<!-- <article>
-				<h2>Titulo del artículo</h2>
-				<div class="atributos-articulo">
-					<span class="icon icon-calendar"></span>31 de agosto de 2017
-					<span class="icon icon-price-tag"></span>Sin categoria
-				</div>
-
-				<img src="articulo1/imgArticule1.jpeg" alt="">
-				<div class="articulo">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil est, voluptates, totam quisquam quibusdam voluptas, odit ullam aliquam dolor repudiandae, neque obcaecati. Voluptate dolorum eius facere ipsam iusto, error non!</div>
-
-				<a href="articulo1"><button type="button" class="btn">LEER MÁS</button></a>
-			</article>
-
-			<article>
-				<h2>Titulo del artículo</h2>
-				<div class="atributos-articulo">
-					<span class="icon icon-calendar"></span>31 de agosto de 2017
-					<span class="icon icon-price-tag"></span>Sin categoria
-				</div>
-
-				<img src="articulo1/imgArticule1.jpeg" alt="">
-				<div class="articulo">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil est, voluptates, totam quisquam quibusdam voluptas, odit ullam aliquam dolor repudiandae, neque obcaecati. Voluptate dolorum eius facere ipsam iusto, error non!</div>
-
-				<a href="articulo1"><button type="button" class="btn">LEER MÁS</button></a>
-			</article>
-
-			<article>
-				<h2>Titulo del artículo</h2>
-				<div class="atributos-articulo">
-					<span class="icon icon-calendar"></span>31 de agosto de 2017
-					<span class="icon icon-price-tag"></span>Sin categoria
-				</div>
-
-				<img src="articulo1/imgArticule1.jpeg" alt="">
-				<div class="articulo">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil est, voluptates, totam quisquam quibusdam voluptas, odit ullam aliquam dolor repudiandae, neque obcaecati. Voluptate dolorum eius facere ipsam iusto, error non!</div>
-
-				<a href="articulo1"><button type="button" class="btn">LEER MÁS</button></a>
-			</article> -->
 			
 			<!-- Busqueda -->
 
@@ -234,7 +196,7 @@
 
 			<div id="publicaciones-recientes" class="bloques-de-links">
 
-				<h2>Publicaciones recientes</h2>
+				<h2>Publicaciones destacadas</h2>
 				<ul>
 					<li><a href="#">Publicacion 1</a></li>
 					<li><a href="#">Publicacion 2</a></li>

@@ -3,27 +3,9 @@
 	include 'conexionDB.php';
 
 	//El 31 de Diciembre de cada año se actualiza
+	
 
-	if($diaActual == 31 && $mesActual == 12){
-
-		//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-		//Conexión a BD
-
-		$servername = "localhost";
-		$username = "root";
-		$password = "Zedstaphplis07.";
-		$dbname = "guiabd";
-
-		// Creamos la conexión
-		$conn = new mysqli($servername, $username, $password, $dbname);
-
-		// Verificamos la conexión
-		if ($conn->connect_error) {
-		    die("Connection failed: " . $conn->connect_error);
-		} 
-
-		//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+	if($diaActual == 31 && $mesActual == 'Diciembre'){
 
 		$Query = 'SELECT * FROM mes;';
 
@@ -43,6 +25,8 @@
 		} else {
 		    echo "0 results";
 		}
+
+		//Hacer un ciclo forEach aquí
 
 		for ($i = 1; $i <= 12; $i++){
 

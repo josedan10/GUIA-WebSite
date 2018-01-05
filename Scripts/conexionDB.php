@@ -30,8 +30,10 @@
 	$diaSemanaActual = $diasSemana[date('l')];		//Dia de la semana correspondiente al array $diasSemana
 
 	$arrayFecha = explode("/", $fechaCompleta); 	//Array de la fecha
-	$mesActual = $Meses[$arrayFecha[2]];			//Mes actual
+	$mesActual = $Meses[(int)$arrayFecha[2]];		//Mes actual
 	$diaActual = $arrayFecha[1]; 					//Dia actual
+
+	//$diaActual = 31;
 
 
 	//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -40,8 +42,9 @@
 	//Supongamos que el mes actual es SEPTIEMBRE, la BD está estructurada de manera que solo necesito el día de la semana
 	//en el que comienza el mes y el número de días totales para armar el mes completo
 
-	//$mesActual = 'Julio';
-	//$arrayFecha[2] = 7;
+	// $mesActual = 'Diciembre';
+	// $arrayFecha[2] = 12;
+	// $diaActual = 31;
 
 	//Para colocar el titulo con el trimestre adecuado
 

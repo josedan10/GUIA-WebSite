@@ -35,20 +35,25 @@
 				margin-bottom: 10px;
 				justify-content: space-between;
 
-				.mesBlock{
-				
+
+				select{
 					font: $texto;
-					text-align: center;	
-					padding: 5px 10px;		
+					box-sizing: border-box;
 					background: $morado-ppal;
-					color: $pastel;	
+					text-align: center;
+					padding: 0 10px;
+					border: none;
+					min-width: 120px;
+					color: $pastel;
+					margin: 0 auto;
 				}
+				
 			}
 
 			.div-dias{
 
-				height: 300px;
-				max-width: 400px;
+				height: 290px;
+				width: 400px;
 				display: flex;
 				margin: 0 auto;
 				padding-top: 10px;
@@ -63,7 +68,7 @@
 			
 					width: 40px;
 					height: 40px;
-					margin: 0 10px;
+					margin: 3px 10px;
 					font: $texto;
 					border-radius: 50%;
 					display: flex;
@@ -75,9 +80,15 @@
 
 				}
 
+				.dia:hover,
+				.dia-evento:hover,
+				.dia-actual:hover{
+					cursor: pointer;
+				}
+
 				.dia-evento{
 					background: $aguamarina;
-					color: $aguamarina;
+					color: $morado-ppal;
 				}
 
 				.dia-actual{
@@ -113,9 +124,10 @@
 				}
 			}
 
-			.detalles{
+			.detalles, 
+			.contador{
 				font: $texto;
-				padding: 20px 0;
+				padding: 10px 0 15px;
 
 				display: flex;
 				justify-content: space-around;
@@ -132,6 +144,14 @@
 				}
 			}
 			
+		}
+
+		.evento-aux{
+			min-width: 300px;
+			height: 100vh;
+			position: relative;
+			background: $aguamarina;
+			display: none;
 		}
 
 		.imagen{

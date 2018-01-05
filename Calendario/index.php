@@ -23,116 +23,40 @@
 		</nav>
 
 		<div class="container">
-
-			<?php require '../Scripts/conexionDB.php'; ?>
 			
 			<div class="titulo-calendario">
-				<?php echo strtoupper($mes1).' - '.strtoupper($mes2).' '.$arrayFecha[0]; ?>
+				
+				ENERO - MARZO 2018
+				
 			</div>
 
 			<div class="presentacion">
-				<div class="calendario">
+				<div class="calendario" id="calendario">
 					<div class="mes">
-						<div class="icon"></div>
-						<div class="mesBlock"><?php echo "$mesActual"; ?></div>
-						<div class="icon"></div>
+						<select id="mes">
+						  <option value="0">Enero</option>
+						  <option value="1">Febrero</option>
+						  <option value="2">Marzo</option>
+						</select>
 					</div>
 
-					<div class="div-dias">
-						
-						<div class="dia-nombre dia-inicio">D</div>
-						<div class="dia-nombre">L</div>
-						<div class="dia-nombre">M</div>
-						<div class="dia-nombre">M</div>
-						<div class="dia-nombre">J</div>
-						<div class="dia-nombre">V</div>
-						<div class="dia-nombre dia-final">S</div>
-
-						<?php
-
-							
-							////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-							$Query = "SELECT Inicio, Dias FROM mes WHERE Nombre = '$mesActual';";
-
-							//Consulta
-							$resultado = $conn->query($Query);
-
-							$row = $resultado->fetch_row();
-
-							$diaInicio = $row[0];
-							$diaFinal = $row[1];
-
-							$conn->close();
-
-							///////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-							//Creamos el Calendario
-
-							for($i = 1, $dia = 1; $i <= 42; $i++){
-
-								if($i < $diaInicio || $dia > $diaFinal){
-
-									if($i % 7 == 0){
-
-										echo '<div class="dia-inactivo dia-final"></div>';
-
-									}else if($i % 7 == 1){
-
-										echo '<div class="dia-inactivo dia-inicio"></div>';
-
-									}else{
-
-										echo '<div class="dia-inactivo"></div>';
-
-									}
-								}else{
-
-									switch($dia){
-										case $diaActual:
-											if($i % 7 == 0){
-
-												echo '<div class="dia-actual dia-final">'.$dia.'</div>';
-
-											}else if($i % 7 == 1){
-
-												echo '<div class="dia-actual dia-inicio">'.$dia.'</div>';
-
-											}else{
-
-												echo '<div class="dia-actual">'.$dia.'</div>';
-
-											}
-											$dia++;
-											break;
-
-										default:
-
-											if($i % 7 == 0){
-
-												echo '<div class="dia dia-final">'.$dia.'</div>';
-
-											}else if($i % 7 == 1){
-
-												echo '<div class="dia dia-inicio">'.$dia.'</div>';
-
-											}else{
-
-												echo '<div class="dia">'.$dia.'</div>';
-
-											}
-
-											$dia++;
-											break;
-
-									}
-											
-								}
-
-
-							}
-
-						?>
+					<div class="contador" id="contador">
+						<div>
+							<h3>DIAS</h3>
+							<div id="dias"></div>
+						</div>
+						<div>
+							<h3>HORAS</h3>
+							<div id="horas"></div>
+						</div>
+						<div>
+							<h3>MINUTOS</h3>
+							<div id="minutos"></div>
+						</div>
+						<div>
+							<h3>SEGUNDOS</h3>
+							<div id="segundos"></div>
+						</div>
 					</div>
 					<div class="detalles">
 						<div>
@@ -147,12 +71,16 @@
 				</div>
 				
 				
-				<div class="imagen">
+				<div class="imagen" id="imagenEvento">
 					<img src="ImagenesEventos/GUIA-flyerNuevos.jpg" alt="" />
 					<div class="resumen">
 						<h3>Título del Evento</h3>
 						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium iure iusto placeat quas fuga sit impedit ipsum veniam architecto! Numquam praesentium eaque, accusantium voluptates, qui tempore dolorem voluptas quam porro!</p>
 					</div>
+
+				</div>
+				<div id="eventoAux" class="evento-aux">
+					No hay eventos este día
 				</div>
 			</div>
 			
@@ -160,13 +88,16 @@
 		</div>
 
 		<?php require '../includes/footer.php' ?>
-
+		
 	</div>
 
 
 	<!-- Javascript -->
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
 	<script src="../dist/bundle.min.js"></script>
+	<script src="../js/contador.js"></script>
+	<script src="data-calendar.json"></script>
+	<script src="../js/gen-calendar.js"></script>
 	
 </body>
 </html>

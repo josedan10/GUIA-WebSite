@@ -43,6 +43,7 @@
 						width: 300px;
 
 						.dia,
+						.dia-actual,
 						.dia-evento,
 						.dia-nombre,
 						.dia-inactivo{
@@ -64,6 +65,11 @@
 					.detalles{
 						padding: 0 10px;
 					}
+				}
+
+				.evento-aux{
+					width: 100%;
+					min-width: 0;
 				}
 			}
 

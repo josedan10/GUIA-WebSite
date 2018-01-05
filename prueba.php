@@ -1,27 +1,51 @@
-<?php require 'Scripts/conexionDB.php'; 
+<?php 
 
-	$Query = 'SELECT * FROM mes;';
+	//Conexión a BD
 
-	$diasInicio = array();
-	$diasTotales = array();
+	$servername = "localhost";
+	$username = "root";
+	$password = "Zedstaphplis07.";
+	$dbname = "guiabd";
 
-	$resultado = $conn->query($Query);
+	// Creamos la conexión
+	$conn = new mysqli($servername, $username, $password, $dbname);
 
-	if ($resultado->num_rows > 0) {
-	    // output data of each row
-	    while($row = $resultado->fetch_assoc()) {
-	        //echo "Nombre: " . $row["Nombre"]. " - Inicio: " . $row["Inicio"]. " -Dias: " . $row["Dias"]. "<br>";
-
-	        $diasInicio[$row["Nombre"]] = $row["Inicio"];
-	        $diasTotales[$row["Nombre"]] = $row["Dias"];
-
-	    }
-	} else {
-	    echo "0 results";
+	// Verificamos la conexión
+	if ($conn->connect_error) {
+	    die("Connection failed: " . $conn->connect_error);
 	}
 
-	$conn->close();
+	$Query = "SELECT COUNT(Titulo) AS TOTAL FROM articulo;";
+	$resultado = $conn->query($Query);
 
+	$row = $resultado->fetch_assoc();
+
+	$TOTAL = $row["TOTAL"];
+	echo "El total es: $TOTAL\n";
+
+	$queryArt = "SELECT * FROM articulo ORDER BY Fecha DESC;";
+	$resultadoArticulos = $conn->query($queryArt);
 	
+	for($i = 0; $i < 10; $i++) {
+		$row = $resultadoArticulos->fetch_assoc();
+        echo "Titulo: " . $row["Titulo"]."\n";
+    }
+
+	// foreach($arrayArt as $articulo){
+
+	// 	echo "$articulo";
+	// 	// echo "<article>
+	// 	// 	<h2>".$articulo["Titulo"]."</h2>
+	// 	// 	<div class='atributos-articulo'>
+	// 	// 		<span class='icon icon-calendar'></span>".$articulo["Fecha"]."
+	// 	// 		<span class='icon icon-price-tag'></span>Sin categoria
+	// 	// 	</div>
+			
+	// 	// 	<img src='articulo1/imgArticule1.jpeg' alt='' />
+	// 	// 	<div class='articulo'>".$articulo["Contenido"]."</div>
+			
+	// 	// </article>";
+	// }
+
 
 ?>
