@@ -39,6 +39,8 @@
 						  <option value="2">Marzo</option>
 						</select>
 					</div>
+					
+					<h3>EL EVENTO COMIENZA EN</h3>
 
 					<div class="contador" id="contador">
 						<div>
@@ -58,7 +60,7 @@
 							<div id="segundos"></div>
 						</div>
 					</div>
-					<div class="detalles">
+					<div class="detalles" id="detalles">
 						<div>
 							<h3>HORA</h3>
 							<p>7:30 am - 9:30 am</p>
@@ -75,7 +77,7 @@
 					<img src="ImagenesEventos/GUIA-flyerNuevos.jpg" alt="" />
 					<div class="resumen">
 						<h3>Título del Evento</h3>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium iure iusto placeat quas fuga sit impedit ipsum veniam architecto! Numquam praesentium eaque, accusantium voluptates, qui tempore dolorem voluptas quam porro!</p>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias sed dicta porro voluptas? Eaque rem earum enim ut facere aut, totam, voluptatem vero repudiandae ipsam consectetur accusantium omnis veritatis. Illum laborum ut amet aliquid ratione impedit dolor explicabo minus officiis, rem cupiditate voluptatibus nostrum in vitae sunt, fugit nam. Explicabo.</p>
 					</div>
 
 				</div>
@@ -94,6 +96,7 @@
 
 	<!-- Javascript -->
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+	
 	<script src="../dist/bundle.min.js"></script>
 	<script src="../js/contador.js"></script>
 	<script src="data-calendar.json"></script>

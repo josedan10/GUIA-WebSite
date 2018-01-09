@@ -29,6 +29,11 @@
 			padding: 0 20px;
 			box-sizing: border-box;
 
+			h3{
+				text-align: center;
+				width: 100%;
+			}
+
 			.mes{
 				
 				display: flex;
@@ -128,7 +133,6 @@
 			.contador{
 				font: $texto;
 				padding: 10px 0 15px;
-
 				display: flex;
 				justify-content: space-around;
 
@@ -147,11 +151,13 @@
 		}
 
 		.evento-aux{
-			min-width: 300px;
-			height: 100vh;
+			min-width: 500px;
+			height: 380px;
 			position: relative;
-			background: $aguamarina;
 			display: none;
+			font: $texto-medio;
+			justify-content: center;
+			align-items: center;
 		}
 
 		.imagen{
@@ -171,14 +177,12 @@
 				box-sizing: border-box;
 
 				h3{
-					//padding:  30px;
 					width: 80%;
 					text-align: center;
 					margin: 0 auto 10px;	
 				}
 
 				p{
-					//display: none;
 					text-align: justify;
 					width: 80%;
 					font: $texto;
@@ -188,10 +192,5 @@
 				}
 			}
 		}
-
 	}
-
-
 }
-
-//14-11222@usb.ve

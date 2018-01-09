@@ -133,6 +133,9 @@ h3 {
     background: #24B156; }
 
 footer {
+  position: relative;
+  bottom: 0;
+  margin-top: 20px;
   padding: 10px 14px;
   background: #2B0C47;
   font: normal 12px "Roboto", "Arial", sans-serif;
@@ -286,6 +289,9 @@ footer {
     .container .presentacion .calendario {
       padding: 0 20px;
       box-sizing: border-box; }
+      .container .presentacion .calendario h3 {
+        text-align: center;
+        width: 100%; }
       .container .presentacion .calendario .mes {
         display: flex;
         margin-bottom: 10px;
@@ -363,11 +369,13 @@ footer {
             width: 100%;
             text-align: center; }
     .container .presentacion .evento-aux {
-      min-width: 300px;
-      height: 100vh;
+      min-width: 500px;
+      height: 380px;
       position: relative;
-      background: #24B156;
-      display: none; }
+      display: none;
+      font: normal 18px "Roboto", "Arial", sans-serif;
+      justify-content: center;
+      align-items: center; }
     .container .presentacion .imagen {
       max-width: 500px;
       position: relative; }
@@ -603,7 +611,7 @@ footer {
           align-items: center;
           justify-content: center; }
     .main .container .presentacion .imagen {
-      margin: 20px 0 0; }
+      margin: 20px 0; }
       .main .container .presentacion .imagen .detalles {
         padding: 0 10px; }
     .main .container .presentacion .evento-aux {
@@ -627,6 +635,9 @@ footer {
 
   .formulario {
     padding: 10px 0; }
+
+  .presentacion .imagen {
+    margin-bottom: 60px; }
 
   footer {
     padding: 10px 0; }

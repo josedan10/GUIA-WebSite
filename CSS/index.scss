@@ -135,6 +135,9 @@
 }
 
 footer{
+	position: relative;
+	bottom: 0;
+	margin-top: 20px;
 	padding: 10px 14px;
 	background: $morado-ppal;
 	font: $texto-peq;

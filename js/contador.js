@@ -69,25 +69,32 @@ var Reloj = {
 	horas: 0,
 	minutos: 0,
 	segundos: 0,
-	fecha: "01-06",
-	horaInicio: "07:00", 
-	iniciarConteo: function(){
+	fecha: "01-09",
+	horaInicio: "07:00",
+	contador: null,
+
+	tiempoRestante: function(){
+		//Esta función devuelve la diferencia de tiempo entre la hora actual y el tiempo indicado para el inicio del conteo
+		
 		var date = "2018-"+Reloj.fecha+"T"+Reloj.horaInicio+":00Z";
-		//var date = "2018-"+fecha+"T"+hora+":00Z";
 		var diaEvento = new Date(date);
 		var hoy = new Date();
 
-		var diferencia = diaEvento.getTime() - hoy.getTime();
+		return diaEvento.getTime() - hoy.getTime();
+	},
+
+	iniciarConteo: function(){
+		var diferencia = Reloj.tiempoRestante;
 
 		//Primero pasamos de milisegundos a segundos
 		Reloj.segundos = Math.floor(diferencia / 1000);		//Segundos parciales
 
 		//Después pasamos de segundos a minutos
-		Reloj.minutos = Math.floor(Reloj.segundos / 60); 		//Minutos parciales
+		Reloj.minutos = Math.floor(Reloj.segundos / 60); 	//Minutos parciales
 		Reloj.segundos = Reloj.segundos % 60; 				//Segundos restantes
 
 		//Pasamos de minutos a horas
-		Reloj.horas = Math.floor(Reloj.minutos / 60);			//Horas parciales
+		Reloj.horas = Math.floor(Reloj.minutos / 60);		//Horas parciales
 		Reloj.minutos = Reloj.minutos % 60;					//Minutos restantes
 
 		//Pasamos de horas a días
@@ -113,13 +120,9 @@ var Reloj = {
 		if(Reloj.segundos < 10) segundos.innerHTML = "0" + Reloj.segundos;
 		else segundos.innerHTML = Reloj.segundos;
 
-	},
-
-	contador: null
+	}
 };
 
 // var miReloj = new Reloj();
 
 // miReloj.contador = setInterval(miReloj.iniciarConteo("05-05","07:00"), 1000);
-
-Reloj.contador = setInterval(Reloj.iniciarConteo, 1000);

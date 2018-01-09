@@ -42,9 +42,11 @@
 
 				case 2:
 					if($arrayFecha[0] % 4 == 0){
+						//Año bisiesto
 						$QueryUpdate = "UPDATE mes SET Inicio = $varDia, Dias = 29 WHERE Nombre = '$Meses[$i]';";
 
 					}elseif($arrayFecha[0] % 4 == 1){
+						//Año siguiente
 						$QueryUpdate = "UPDATE mes SET Inicio = $varDia, Dias = 28 WHERE Nombre = '$Meses[$i]';";
 
 					}else{
@@ -65,10 +67,6 @@
 			} else {
 			    echo "Error updating record: " . $conn->error;
 			}
-
-			//$conn->query($QueryUpdate);
-
-			//if ($i == 1) $conn->query("INSERT INTO autor(Correo, Nombre_autor, Apellido_autor) VALUES ('josedanq100@gmail.com', 'José Daniel', 'Quintero');");
 
 			$varDia = $diaInicio;
 
