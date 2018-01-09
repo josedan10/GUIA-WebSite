@@ -84,8 +84,7 @@ var Reloj = {
 	},
 
 	iniciarConteo: function(){
-		var diferencia = Reloj.tiempoRestante;
-
+		var diferencia = Reloj.tiempoRestante();
 		//Primero pasamos de milisegundos a segundos
 		Reloj.segundos = Math.floor(diferencia / 1000);		//Segundos parciales
 

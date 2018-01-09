@@ -10,11 +10,11 @@ var calendar = {
 		"mes": 0,
 
 		"eventos": {
-			"14": {
+			"8": {
 				"resumen": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero, illo optio voluptatem minus molestiae neque facilis. Veniam nesciunt deserunt provident delectus ea, distinctio necessitatibus debitis ut qui, tempora est, et.",
-				"fecha": "01-14",	//mes-dia
-				"inicio": "9:30",
-				"final": "11:30",
+				"fecha": "01-8",	//mes-dia
+				"inicio": "15:30",
+				"final": "16:30",
 				"lugar": "EGE 003"
 			},
 

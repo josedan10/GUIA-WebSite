@@ -39,8 +39,8 @@
 						  <option value="2">Marzo</option>
 						</select>
 					</div>
-					
-					<h3>EL EVENTO COMIENZA EN</h3>
+
+					<h3></h3>
 
 					<div class="contador" id="contador">
 						<div>
