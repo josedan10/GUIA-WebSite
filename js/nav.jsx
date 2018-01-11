@@ -64,16 +64,17 @@ class NavLink extends React.Component{
 
 		var ruta = "";
 
-		const paths = ['/GUIA-Website/Sirius/', '/GUIA-Website/Calendario/'];
-		const articulo = /\/GUIA-Website\/Sirius\/\w+\//;
-		// const paths = ['/Sirius/', '/Calendario/'];
-		// const articulo = /\/Sirius\/\w+\/\w+[.]\w+/;
+		// const paths = ['/GUIA-Website/Sirius/', '/GUIA-Website/Calendario/'];
+		// const articulo = /\/GUIA-Website\/Sirius\/\w+\//;
+		const paths = ['/Sirius/', '/Calendario/'];
+		const articulo = /\/Sirius\/\w+\/\w+[.]\w+/;
 
 		//IMPORTANTE:
 		//Al subir los archivos a las páginas se debe modificar la ruta porque no estarán en la
 		//carpeta 'GUIA-WebSite'
 		//
-				
+		
+		console.log(location.pathname);
 		
 		const links = {
 							Sirius:
@@ -81,7 +82,7 @@ class NavLink extends React.Component{
 							 	calendario: '../Calendario/',blog: '#'},
 
 							Calendario:
-								{inicio: '..', local: '../index.php#', 
+								{inicio: '../', local: '../index.php#', 
 							 	calendario: '#', blog: '../Sirius/'},
 
 							Articulo:
@@ -153,12 +154,14 @@ class NavLink extends React.Component{
 						ruta = links.Calendario.blog;
 						break;
 				}
+
+				console.log("Si sirve");
 				
 				break;
 
 			default:
 
-					
+				
 				
 				if(articulo.test(location.pathname)){	//Estamos en algún artículo
 
@@ -189,6 +192,8 @@ class NavLink extends React.Component{
 
 				}else{										//Estamos en alguna parte del inicio
 					
+					console.log(location.pathname);
+
 					switch (this.props.value){
 
 						case 'inicio':

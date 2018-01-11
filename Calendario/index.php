@@ -97,9 +97,9 @@
 	<!-- Javascript -->
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
 	
+	<script src="data-calendar.json"></script>
 	<script src="../dist/bundle.min.js"></script>
 	<script src="../js/contador.js"></script>
-	<script src="data-calendar.json"></script>
 	<script src="../js/gen-calendar.js"></script>
 	
 </body>

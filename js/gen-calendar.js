@@ -30,12 +30,14 @@ $(document).ready(function(){
 			imgCalendario = $("#imagenEvento"),
 			eventoAux = $("#eventoAux"),
 			detallesEvento = $("#detalles"),
+			horaDetalles = detallesEvento.children[0];
 			diaActual = this.innerHTML;
 		
 		if(evento){
 
 			Reloj.horaInicio = diaEvento.inicio;
 			Reloj.fecha = diaEvento.fecha;
+
 			tiempoRestante = Reloj.tiempoRestante(); 
 
 			if(tiempoRestante <= 0){
@@ -64,6 +66,8 @@ $(document).ready(function(){
 			imgCalendario.css("display", "block");
 			detallesEvento.css("display", "flex");
 			eventoAux.css({"display": "none", "width": "0"});
+			detalles.children[0].children[1].innerHTML = diaEvento.inicio + " - " + diaEvento.final;
+			detalles.children[1].children[1].innerHTML = diaEvento.lugar;
 			///////////////////////////////////////////////////////////////
 
 		}else{
@@ -216,7 +220,7 @@ $(document).ready(function(){
 							evento = true;												//Variable indicadora de evento
 						}
 
-						fijarEvento(evento, mesActual.eventos[diaActual]);
+
 
 
 						if(mes == parseInt(mesElemento)){
@@ -224,43 +228,26 @@ $(document).ready(function(){
 
 							if(i % 7 == 0){
 
-								if(evento){
-									divDia = genDia(["dia-evento", "dia-final"]);
-									divDia.click(cambiarDia);
-									divDias.append(divDia.text(dia));
-								}else{
-									divDia = genDia(["dia-actual", "dia-final"]);
-									divDia.click(cambiarDia);
-									divDias.append(divDia.text(dia));
-								}						
+								
+								divDia = genDia(["dia-actual", "dia-final"]);
+								divDia.click(cambiarDia);
+								divDias.append(divDia.text(dia));					
 
 							}else if(i % 7 == 1){
 
-								if(evento){
-									divDia = genDia(["dia-evento", "dia-inicio"]);
-									divDia.click(cambiarDia);
-									divDias.append(divDia.text(dia));
-								}else{
-									divDia = genDia(["dia-actual", "dia-inicio"]);
-									divDia.click(cambiarDia);
-									divDias.append(divDia.text(dia));
-								}
-								
+								divDia = genDia(["dia-actual", "dia-inicio"]);
+								divDia.click(cambiarDia);
+								divDias.append(divDia.text(dia));								
 
 							}else{
 
-								if(evento){
-									divDia = genDia(["dia-evento"]);
-									divDia.click(cambiarDia);
-									divDias.append(divDia.text(dia));
-
-								}else{
-									divDia = genDia(["dia-actual"]);
-									divDia.click(cambiarDia);
-									divDias.append(divDia.text(dia));
-								}
-
+								divDia = genDia(["dia-actual"]);
+								divDia.click(cambiarDia);
+								divDias.append(divDia.text(dia));
+								
 							}
+
+							fijarEvento(evento, mesActual.eventos[diaActual]);
 
 
 						}else{

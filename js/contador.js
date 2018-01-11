@@ -76,7 +76,7 @@ var Reloj = {
 	tiempoRestante: function(){
 		//Esta función devuelve la diferencia de tiempo entre la hora actual y el tiempo indicado para el inicio del conteo
 		
-		var date = "2018-"+Reloj.fecha+"T"+Reloj.horaInicio+":00Z";
+		var date = "2018-"+Reloj.fecha+"T"+Reloj.horaInicio+":00-04:00";
 		var diaEvento = new Date(date);
 		var hoy = new Date();
 
@@ -85,6 +85,14 @@ var Reloj = {
 
 	iniciarConteo: function(){
 		var diferencia = Reloj.tiempoRestante();
+
+
+
+		if(diferencia <= 0){
+			location.reload();
+			return;
+		}
+
 		//Primero pasamos de milisegundos a segundos
 		Reloj.segundos = Math.floor(diferencia / 1000);		//Segundos parciales
 

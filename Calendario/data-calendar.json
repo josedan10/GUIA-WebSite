@@ -10,28 +10,31 @@ var calendar = {
 		"mes": 0,
 
 		"eventos": {
-			"8": {
+			"10": {
+				"titulo": "Lorem ipsum dolor sit.",
 				"resumen": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero, illo optio voluptatem minus molestiae neque facilis. Veniam nesciunt deserunt provident delectus ea, distinctio necessitatibus debitis ut qui, tempora est, et.",
-				"fecha": "01-8",	//mes-dia
-				"inicio": "15:30",
-				"final": "16:30",
+				"fecha": "01-10",	//mes-dia
+				"inicio": "20:20",
+				"final": "20:30",
 				"lugar": "EGE 003"
 			},
 
 			"18": {
+				"titulo": "Lorem ipsum dolor sit.",
 				"resumen": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis doloribus excepturi corrupti dicta incidunt, corporis hic enim blanditiis totam, iure vero quibusdam fuga, soluta neque praesentium ea temporibus. Beatae, in.",
 				"fecha": "01-18",
 				"inicio": "11:30",
 				"final": "13:30",
-				"lugar": "EGE 003"
+				"lugar": "Sede de GUIA"
 			},
 
 			"22": {
+				"titulo": "Lorem ipsum dolor sit.",
 				"resumen": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero, illo optio voluptatem minus molestiae neque facilis. Veniam nesciunt deserunt provident delectus ea, distinctio necessitatibus debitis ut qui, tempora est, et.",
 				"fecha": "01-22",
 				"inicio": "13:30",
 				"final": "15:30",
-				"lugar": "EGE 003"
+				"lugar": "ENE 007"
 			}		
 		}
 	},
@@ -43,27 +46,30 @@ var calendar = {
 		"mes": 1,
 		"eventos": {
 			"13": {
+				"titulo": "Lorem ipsum dolor sit.",
 				"resumen": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero, illo optio voluptatem minus molestiae neque facilis. Veniam nesciunt deserunt provident delectus ea, distinctio necessitatibus debitis ut qui, tempora est, et.",
 				"fecha": "02-13",
 				"inicio": "9:30",
 				"final": "13:30",
-				"lugar": "EGE 003"
+				"lugar": "AUD"
 			},
 
 			"16": {
+				"titulo": "Lorem ipsum dolor sit.",
 				"resumen": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis doloribus excepturi corrupti dicta incidunt, corporis hic enim blanditiis totam, iure vero quibusdam fuga, soluta neque praesentium ea temporibus. Beatae, in.",
 				"fecha": "02-16",
 				"inicio": "7:30",
 				"final": "9:30",
-				"lugar": "EGE 003"
+				"lugar": "AUL 104"
 			},
 
 			"22": {
+				"titulo": "Lorem ipsum dolor sit.",
 				"resumen": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero, illo optio voluptatem minus molestiae neque facilis. Veniam nesciunt deserunt provident delectus ea, distinctio necessitatibus debitis ut qui, tempora est, et.",
 				"fecha": "02-22",
 				"inicio": "13:30",
 				"final": "17:30",
-				"lugar": "EGE 003"
+				"lugar": "EGE 005"
 			}	
 		}
 	},
@@ -75,27 +81,30 @@ var calendar = {
 		"mes": 2,
 		"eventos": {
 			"3": {
+				"titulo": "Lorem ipsum dolor sit.",
 				"resumen": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero, illo optio voluptatem minus molestiae neque facilis. Veniam nesciunt deserunt provident delectus ea, distinctio necessitatibus debitis ut qui, tempora est, et.",
 				"fecha": "03-03",
 				"inicio": "9:30",
 				"final": "11:30",
-				"lugar": "EGE 003"
+				"lugar": "MEU 201"
 			},
 
 			"19": {
+				"titulo": "Lorem ipsum dolor sit.",
 				"resumen": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis doloribus excepturi corrupti dicta incidunt, corporis hic enim blanditiis totam, iure vero quibusdam fuga, soluta neque praesentium ea temporibus. Beatae, in.",
 				"fecha": "03-19",
 				"inicio": "9:30",
 				"final": "11:30",
-				"lugar": "EGE 003"
+				"lugar": "MEM 009"
 			},
 
 			"22": {
+				"titulo": "Lorem ipsum dolor sit.",
 				"resumen": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero, illo optio voluptatem minus molestiae neque facilis. Veniam nesciunt deserunt provident delectus ea, distinctio necessitatibus debitis ut qui, tempora est, et.",
 				"fecha": "03-22",
 				"inicio": "18:30",
 				"final": "21:30",
-				"lugar": "EGE 003"
+				"lugar": "EGE 007"
 			}
 		}
 

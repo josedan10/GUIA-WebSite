@@ -1,5 +1,3 @@
-<?php require 'Scripts/updateDB.php' ?>
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -65,7 +63,9 @@
 
 		<div id="nosotros" class="nosotros">
 			<h1><a name="nosotros">NOSOTROS</a></h1>
-			<article>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum beatae, tenetur odit quas, magni mollitia aliquam assumenda ad id quasi doloribus sunt minima amet incidunt praesentium ullam neque at vitae aut perspiciatis ipsum, reiciendis iste ducimus soluta. Accusantium saepe numquam a deserunt hic ea ratione, officiis iusto neque tenetur vero, consequatur animi iure magnam nobis quaerat earum praesentium illo tempore similique laboriosam porro nesciunt dolorem laborum. Debitis, et, ad. Veritatis ex ipsum, possimus eos, modi blanditiis ipsam quibusdam, facere id quas repellendus necessitatibus aut? Et culpa harum ipsam laboriosam in! Omnis, dignissimos consequuntur libero repellendus laborum aspernatur doloremque ratione eligendi laboriosam quas quibusdam voluptatum sapiente, voluptate voluptatibus ad illo aliquam neque quis dolores minus explicabo ea nam rerum reprehenderit, consequatur! Dicta architecto quam, vel ad officiis impedit enim quae facere tempore harum dolorum temporibus aliquam quia dolorem cumque iure ea reprehenderit obcaecati odit quod doloremque sunt! Itaque voluptatum, deserunt praesentium eveniet possimus dolor laboriosam iusto, tempora fugit maxime explicabo!</article>
+			<article>Desde hace más de veinte años, el Grupo Universitario de Investigaciones Astronómicas de la Universidad Simón Bolívar ha mantenido de manera ininterrumpida su mirada en los cielos, observando y aprendiendo sobre todo lo que yace allí afuera en el insondable vacío del espacio, el Cosmos.
+			<br />
+			Numerosas generaciones de estudiantes universitarios, muchos de ellos ya hoy en día exitosos egresados de la USB, han formado parte de esta agrupación a lo largo de los años, cada uno de ellos asegurándose siempre de fomentar y divulgar sus conocimientos con la Universidad y más allá de ella. Con charlas especiales y conferencias, una gran cantidad de profesores e investigadores invitados, especialistas en Astronomía, Astrofísica, Cosmología, Aeronáutica, entre otras ramas del estudio del espacio, han aportado su pequeño grano de arena en el proceso de formación astronómica y desarrollo del pensamiento de estos jóvenes estudiantes uesebistas, quienes a su vez contribuyen con cada charla, cada sesión de observación nocturna o solar, cada curso o taller, al crecimiento de la madre de todas las ciencias, la Astronomía.</article>
 		</div>
 
 		<!-- Equipo -->
@@ -138,7 +138,7 @@
 
 		var mySwiper = new Swiper('.swiper-container', {
 		    speed: 400,
-		    spaceBetween: 100,
+		    spaceBetween: 0,
 		    autoplay: 5000,
 		    autoplayDisableOnInteraction: false,
 		    pagination: '.swiper-pagination',
