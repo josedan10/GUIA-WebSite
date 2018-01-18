@@ -170,6 +170,17 @@ footer {
     margin-top: 10px;
     text-align: center; }
 
+.msg-grande {
+  font: bold 30px "Roboto", "Arial", sans-serif;
+  text-align: center;
+  background: #2B0C47;
+  color: #F5F5F5;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center; }
+
 .mail {
   width: 90%;
   margin: 0 auto;
@@ -635,12 +646,13 @@ footer {
   .formulario {
     padding: 10px 0; }
 
-  .presentacion .imagen {
-    margin-bottom: 100px; }
+  .presentacion {
+    height: 800px; }
+    .presentacion .imagen {
+      margin-bottom: 100px; }
 
   footer {
-    padding: 10px 0;
-    margin-top: 50px; }
+    padding: 10px 0; }
     footer .social {
       margin: 0;
       box-sizing: border-box; }

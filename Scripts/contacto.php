@@ -7,21 +7,34 @@
 	$headers[] = "From: ".$email;
 	$msg = "Mensaje de ".$nombre.".\n".$_POST['mensaje'];
 	
-
-	if((isset($_POST['nombre']) && !empty($_POST['nombre'])) 
-		&& (isset($_POST['email']) && !empty($_POST['email']))
-	&& (isset($_POST['mensaje']) && !empty($_POST['mensaje']))){
-
-		
-
-		mail('guia@usb.ve', $subject, $msg, implode("\r\n", $headers));
-		echo 'Mensaje enviado';
-
-	}else{
-
-		echo 'Fallo al enviar los datos';
-
-	}
-	
-
  ?>
+
+ <!DOCTYPE html>
+ <html lang="es">
+ <head>
+ 	<meta charset="UTF-8">
+ 	<title>GUIA USB</title>
+ 	<link rel="stylesheet" type="text/css" href="../CSS/styles.css">
+ </head>
+ <body>
+
+	<?php 
+
+		if((isset($_POST['nombre']) && !empty($_POST['nombre'])) 
+			&& (isset($_POST['email']) && !empty($_POST['email']))
+			&& (isset($_POST['mensaje']) && !empty($_POST['mensaje']))){
+
+			
+			mail('guia@usb.ve', $subject, $msg, implode("\r\n", $headers));
+			echo '<div class="msg-grande">Mensaje enviado</div>';
+
+		}else{
+
+			echo '<div class="msg-grande">Fallo al enviar los datos</div>';
+
+		}
+
+	?>
+ 	
+ </body>
+ </html>

@@ -190,7 +190,21 @@ footer{
 		text-align: center;
 		//min-width: 200px;
 	}
-
-
 	
+}
+
+
+
+//Msg auxiliares para el correo y el status de Sirius
+
+.msg-grande{
+	font: $titulo-h1;
+	text-align: center;
+	background: $morado-ppal;
+	color: $pastel;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	align-items: center;
 }
