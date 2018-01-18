@@ -64,17 +64,16 @@ class NavLink extends React.Component{
 
 		var ruta = "";
 
-		// const paths = ['/GUIA-Website/Sirius/', '/GUIA-Website/Calendario/'];
-		// const articulo = /\/GUIA-Website\/Sirius\/\w+\//;
-		const paths = ['/Sirius/', '/Calendario/'];
-		const articulo = /\/Sirius\/\w+\/\w+[.]\w+/;
+		const paths = ['/GUIA-Website/Sirius/', '/GUIA-Website/Calendario/'];
+		const articulo = /\/GUIA-Website\/Sirius\/\w+\//;
+		// const paths = ['/Sirius/', '/Calendario/'];
+		// const articulo = /\/Sirius\/\w+\/\w+[.]\w+/;
 
 		//IMPORTANTE:
 		//Al subir los archivos a las páginas se debe modificar la ruta porque no estarán en la
 		//carpeta 'GUIA-WebSite'
 		//
 		
-		console.log(location.pathname);
 		
 		const links = {
 							Sirius:

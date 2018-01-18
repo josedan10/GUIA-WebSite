@@ -64,6 +64,9 @@ $(document).ready(function(){
 			
 			//Bloques
 			imgCalendario.css("display", "block");
+			imgCalendario[0].children[1].children[0].innerHTML = diaEvento.titulo;
+			imgCalendario[0].children[1].children[1].innerHTML = diaEvento.resumen;
+
 			detallesEvento.css("display", "flex");
 			eventoAux.css({"display": "none", "width": "0"});
 			detalles.children[0].children[1].innerHTML = diaEvento.inicio + " - " + diaEvento.final;
